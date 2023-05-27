@@ -18,24 +18,24 @@ import Features from './Components/Featured/Features';
 function App() {
   return (
     <>
-    <Header/>
-    <Hero/>
-    <main id="main">
-    <Features/>
-    <About/>
-    <Services/>
-    <CallAction/>
-    <Skills/>
-    <Facts/>
-    <Portfolio/>
-    <Clients/>
-    <Testimonials/>
-    <Teams/>
-    <Contacts/>
-    </main>
+      <Header />
+      <Hero />
+      <main id="main">
+        <Features />
+        <About />
+        <Services />
+        <CallAction />
+        <Skills />
+        <Facts />
+        <Portfolio />
+        <Clients />
+        <Testimonials />
+        <Teams />
+        <Contacts />
+      </main>
     </>
   );
-    
+
 }
 
 export default App;

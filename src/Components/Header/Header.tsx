@@ -25,13 +25,11 @@ const Header = ()=> {
   return (
     <header id="header" className={`fixed-top d-flex align-items-center ${isScrolled ? 'scrolled' : 'header-transparent'}`}>
     <div className="container-fluid">
-
       <div className="row justify-content-center align-items-center">
         <div className="col-xl-11 d-flex align-items-center justify-content-between">
           <h1 className="logo"><a href="index.html">BizPage</a></h1>
            {/* <a href="index.html" className="logo">
             <img src="assets/img/logo.png" alt="" className="img-fluid"/></a> */}
-
           <nav id="navbar" className="navbar">
             <ul>
               <li><a className="nav-link scrollto active" href="#hero">Home</a></li>
@@ -63,7 +61,6 @@ const Header = ()=> {
           </nav>
         </div>
       </div>
-
     </div>
   </header>
   );
