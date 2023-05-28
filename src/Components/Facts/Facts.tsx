@@ -6,9 +6,34 @@ interface FactItem {
   duration: number;
   label: string;
 }
+const factItems: FactItem[] = [
+  { start: 0, end: 232, duration: 1, label: 'Food Programmes' },
+  { start: 0, end: 421, duration: 1, label: 'Community Projects' },
+  { start: 0, end: 1364, duration: 1, label: 'Hours of learning' },
+  { start: 0, end: 38, duration: 1, label: 'Team members' },
+];
+const startCounting = () => {
+  const counters = document.querySelectorAll('.purecounter');
+  counters.forEach((counter, index) => {
+    const { start, end, duration } = factItems[index];
+    const range = end - start;
+    const increment = end > start ? 1 : -1;
+    const stepTime = Math.abs(Math.floor(duration / range));
 
+    let currentValue = start;
+    const timer = setInterval(() => {
+      currentValue += increment;
+      counter.textContent = currentValue.toString();
+
+      if (currentValue === end) {
+        clearInterval(timer);
+      }
+    }, stepTime);
+  });
+};
 const Facts: React.FC = () => {
   const [counted, setCounted] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,32 +55,9 @@ const Facts: React.FC = () => {
     };
   }, [counted]);
 
-  const factItems: FactItem[] = [
-    { start: 0, end: 232, duration: 1, label: 'Food Programmes' },
-    { start: 0, end: 421, duration: 1, label: 'Community Projects' },
-    { start: 0, end: 1364, duration: 1, label: 'Hours of learning' },
-    { start: 0, end: 38, duration: 1, label: 'Team members' },
-  ];
+  
 
-  const startCounting = () => {
-    const counters = document.querySelectorAll('.purecounter');
-    counters.forEach((counter, index) => {
-      const { start, end, duration } = factItems[index];
-      const range = end - start;
-      const increment = end > start ? 1 : -1;
-      const stepTime = Math.abs(Math.floor(duration / range));
-
-      let currentValue = start;
-      const timer = setInterval(() => {
-        currentValue += increment;
-        counter.textContent = currentValue.toString();
-
-        if (currentValue === end) {
-          clearInterval(timer);
-        }
-      }, stepTime);
-    });
-  };
+  
 
   return (
     <section id="facts">

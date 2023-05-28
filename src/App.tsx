@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
@@ -18,20 +17,20 @@ import Features from './Components/Featured/Features';
 function App() {
   return (
     <>
-      <Header />
-      <Hero />
+      <Header/>
+      <Hero/>
       <main id="main">
-        <Features />
-        <About />
-        <Services />
-        <CallAction />
-        <Skills />
-        <Facts />
-        <Portfolio />
-        <Clients />
-        <Testimonials />
-        <Teams />
-        <Contacts />
+        <Features/>
+        <About/>
+        <Services/>
+        <CallAction/>
+        <Skills/>
+        <Facts/>
+        <Portfolio/>
+        <Clients/>
+        <Testimonials/>
+        <Teams/>
+        <Contacts/>
       </main>
     </>
   );

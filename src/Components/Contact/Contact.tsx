@@ -39,7 +39,7 @@ const Contacts = ()=> {
         </div>
 
         <div className="form">
-          <form action="forms/contact.php" method="post" role="form" className="php-email-form">
+          <form action="forms/contact.php" method="post" className="php-email-form">
             <div className="row">
               <div className="form-group col-md-6">
                 <input type="text" name="name" className="form-control" id="name" placeholder="Your Name" required/>

@@ -6,14 +6,14 @@ interface Skill {
   value: number;
   color: string;
 }
-
+const skills: Skill[] = [
+  { name: 'Mission and Vision', value: 100, color: 'bg-success' },
+  { name: 'Engagement/Collaboration', value: 90, color: 'bg-info' },
+  { name: 'Advocacy/Policy Influence', value: 75, color: 'bg-warning' },
+  { name: 'Capacity/Sustainability', value: 55, color: 'bg-danger' },
+];
 const Skills: React.FC = () => {
-  const skills: Skill[] = [
-    { name: 'Mission and Vision', value: 100, color: 'bg-success' },
-    { name: 'Engagement/Collaboration', value: 90, color: 'bg-info' },
-    { name: 'Advocacy/Policy Influence', value: 75, color: 'bg-warning' },
-    { name: 'Capacity/Sustainability', value: 55, color: 'bg-danger' },
-  ];
+  
 
   useEffect(() => {
     const skillsSection = document.getElementById('skills');

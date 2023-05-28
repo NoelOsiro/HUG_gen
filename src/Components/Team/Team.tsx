@@ -19,10 +19,10 @@ const Teams = ()=> {
                   <h4>Walter White</h4>
                   <span>Chief Executive Officer</span>
                   <div className="social">
-                    <a href=""><i className="bi bi-twitter"></i></a>
-                    <a href=""><i className="bi bi-facebook"></i></a>
-                    <a href=""><i className="bi bi-instagram"></i></a>
-                    <a href=""><i className="bi bi-linkedin"></i></a>
+                    <a ><i className="bi bi-twitter"></i></a>
+                    <a ><i className="bi bi-facebook"></i></a>
+                    <a ><i className="bi bi-instagram"></i></a>
+                    <a ><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -37,10 +37,10 @@ const Teams = ()=> {
                   <h4>Sarah Jhonson</h4>
                   <span>Product Manager</span>
                   <div className="social">
-                    <a href=""><i className="bi bi-twitter"></i></a>
-                    <a href=""><i className="bi bi-facebook"></i></a>
-                    <a href=""><i className="bi bi-instagram"></i></a>
-                    <a href=""><i className="bi bi-linkedin"></i></a>
+                    <a ><i className="bi bi-twitter"></i></a>
+                    <a ><i className="bi bi-facebook"></i></a>
+                    <a ><i className="bi bi-instagram"></i></a>
+                    <a ><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -55,10 +55,11 @@ const Teams = ()=> {
                   <h4>William Anderson</h4>
                   <span>CTO</span>
                   <div className="social">
-                    <a href=""><i className="bi bi-twitter"></i></a>
-                    <a href=""><i className="bi bi-facebook"></i></a>
-                    <a href=""><i className="bi bi-instagram"></i></a>
-                    <a href=""><i className="bi bi-linkedin"></i></a>
+                    {/* eslint jsx-a11y/anchor-is-valid: 0 */}
+                    <a ><i className="bi bi-twitter"></i></a>
+                    <a ><i className="bi bi-facebook"></i></a>
+                    <a ><i className="bi bi-instagram"></i></a>
+                    <a ><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
@@ -73,10 +74,10 @@ const Teams = ()=> {
                   <h4>Amanda Jepson</h4>
                   <span>Accountant</span>
                   <div className="social">
-                    <a href=""><i className="bi bi-twitter"></i></a>
-                    <a href=""><i className="bi bi-facebook"></i></a>
-                    <a href=""><i className="bi bi-instagram"></i></a>
-                    <a href=""><i className="bi bi-linkedin"></i></a>
+                    <a ><i className="bi bi-twitter"></i></a>
+                    <a ><i className="bi bi-facebook"></i></a>
+                    <a ><i className="bi bi-instagram"></i></a>
+                    <a ><i className="bi bi-linkedin"></i></a>
                   </div>
                 </div>
               </div>
