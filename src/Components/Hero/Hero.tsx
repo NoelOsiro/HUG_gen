@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, ButtonHTMLAttributes, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Hero = () => {
   const carouselItems = [
@@ -44,7 +44,7 @@ const Hero = () => {
     return () => {
       clearInterval(intervalId);
     };
-  }, []);
+  }, [carouselItems.length]);
 
   const handleSlideTo = (slideIndex:number) => {
     setActiveSlide(slideIndex);

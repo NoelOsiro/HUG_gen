@@ -1,56 +1,54 @@
 import React from 'react';
+import './about.css';
 
-const About = ()=> {
+const aboutData = [
+  {
+    imgSrc: 'assets/img/about-mission.jpg',
+    iconClass: 'bi bi-bar-chart',
+    title: 'Our Mission',
+    description: 'Our organization is dedicated to promoting the holistic wellbeing of children, youths, and women. We believe in nurturing their spiritual, emotional, and physical needs while ensuring the promotion and protection of their rights. Through our programs and initiatives, we aim to create an environment where their spiritual growth is supported, their emotional well-being is nurtured, and their physical health is prioritized. We work tirelessly to advocate for and uphold their rights, ensuring that they are treated with dignity, respect, and equality.'
+  },
+  {
+    imgSrc: 'assets/img/about-plan.jpg',
+    iconClass: 'bi bi-brightness-high',
+    title: 'Our Plan',
+    description: 'Create a safe society with equal opportunities for children, education, employment, and gender equality.Our organization is dedicated to promoting the holistic wellbeing of children, youths, and women. We believe in nurturing their spiritual, emotional, and physical needs while ensuring the promotion and protection of their rights. Through our programs and initiatives, we aim to create an environment where their spiritual growth is supported, their emotional well-being is nurtured, and their physical health is prioritized.'
+  },
+  {
+    imgSrc: 'assets/img/about-vision.jpg',
+    iconClass: 'bi bi-calendar4-week',
+    title: 'Our Vision',
+    description: 'We are an organization that aims to address the rising cases of child abuse, high rates of school dropout, especially among girls at the primary level of education, limited access to sexual and reproductive health and rights for adolescents, limited access to orphans and vulnerable children in the community, high rates of unemployment among youth, and violations of women rights.'
+  }
+];
+
+const About = () => {
   return (
     <section id="about">
       <div className="container" data-aos="fade-up">
 
         <header className="section-header">
           <h3>About Us</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>We are an organization that aims to address the rising cases of child abuse,
+            high rates of school dropout especially among girls at the primary level of education,
+            limited access to sexual and reproductive health and rights for adolescents,
+            orphans and vulnerable children in the community and tackle
+            high rates of unemployment among youth, and violations of women's rights.</p>
         </header>
 
         <div className="row about-cols">
-
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div className="about-col">
-              <div className="img">
-                <img src="assets/img/about-mission.jpg" alt="" className="img-fluid"/>
-                <div className="icon"><i className="bi bi-bar-chart"></i></div>
+          {aboutData.map((item, index) => (
+            <div className="col-md-4" data-aos="fade-up" data-aos-delay={100 * (index + 1)} key={index}>
+              <div className="about-col">
+                <div className="img">
+                  <img src={item.imgSrc} alt="" className="img-fluid" />
+                  <div className="icon"><i className={item.iconClass}></i></div>
+                </div>
+                <h2 className="title"><a href=" ">{item.title}</a></h2>
+                <p>{item.description}</p>
               </div>
-              <h2 className="title"><a href="#">Our Mission</a></h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
             </div>
-          </div>
-
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div className="about-col">
-              <div className="img">
-                <img src="assets/img/about-plan.jpg" alt="" className="img-fluid"/>
-                <div className="icon"><i className="bi bi-brightness-high"></i></div>
-              </div>
-              <h2 className="title"><a href="#">Our Plan</a></h2>
-              <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div className="about-col">
-              <div className="img">
-                <img src="assets/img/about-vision.jpg" alt="" className="img-fluid"/>
-                <div className="icon"><i className="bi bi-calendar4-week"></i></div>
-              </div>
-              <h2 className="title"><a href="#">Our Vision</a></h2>
-              <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
-              </p>
-            </div>
-          </div>
-
+          ))}
         </div>
 
       </div>

@@ -1,46 +1,90 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import './skill.css';
 
-const Skills = ()=> {
+interface Skill {
+  name: string;
+  value: number;
+  color: string;
+}
+
+const Skills: React.FC = () => {
+  const skills: Skill[] = [
+    { name: 'Mission and Vision', value: 100, color: 'bg-success' },
+    { name: 'Engagement/Collaboration', value: 90, color: 'bg-info' },
+    { name: 'Advocacy/Policy Influence', value: 75, color: 'bg-warning' },
+    { name: 'Capacity/Sustainability', value: 55, color: 'bg-danger' },
+  ];
+
+  useEffect(() => {
+    const skillsSection = document.getElementById('skills');
+    const progressBars = document.querySelectorAll('.progress-bar');
+
+    const fillProgressBar = (progressBar: HTMLElement, targetValue: number) => {
+      let currentValue = 0;
+      const increment = targetValue / 100; // Adjust the increment based on the target value
+
+      const animateProgressBar = () => {
+        progressBar.style.width = `${currentValue}%`;
+        progressBar.querySelector('.val')!.textContent = `${Math.floor(currentValue)}%`;
+
+        if (currentValue < targetValue) {
+          currentValue += increment;
+          requestAnimationFrame(animateProgressBar);
+        }
+      };
+
+      animateProgressBar();
+    };
+
+    const handleScroll = () => {
+      const bounding = skillsSection!.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (bounding.top <= windowHeight && bounding.bottom >= 0) {
+        progressBars.forEach((progressBar, index) => {
+          const targetValue = skills[index].value;
+          fillProgressBar(progressBar as HTMLElement, targetValue);
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <section id="skills">
       <div className="container" data-aos="fade-up">
-
         <header className="section-header">
-          <h3>Our Skills</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip</p>
+          <h3>Our Programs</h3>
+          <p>
+          Our Programs empower children, promote girls' education, ensure adolescent sexual and reproductive health,
+          support orphans and vulnerable children, foster youth employment, and advocate for women's rights.
+          Together, we create a brighter future for all.
+          </p>
         </header>
 
         <div className="skills-content">
-
-          <div className="progress">
-            <div className="progress-bar bg-success" role="progressbar" aria-valuenow={100} aria-valuemin={0} aria-valuemax={100}>
-              <span className="skill">HTML <i className="val">100%</i></span>
+          {skills.map((skill, index) => (
+            <div className="progress" key={index}>
+              <div
+                className={`progress-bar progress-bar-striped progress-bar-animated ${skill.color}`}
+                role="progressbar"
+                aria-valuenow={skill.value}
+                aria-valuemin={0}
+                aria-valuemax={100}
+              >
+                <span className="skill">{skill.name} <i className="val">0%</i></span>
+              </div>
             </div>
-          </div>
-
-          <div className="progress">
-            <div className="progress-bar bg-info" role="progressbar" aria-valuenow={90} aria-valuemin={0} aria-valuemax={100}>
-              <span className="skill">CSS <i className="val">90%</i></span>
-            </div>
-          </div>
-
-          <div className="progress">
-            <div className="progress-bar bg-warning" role="progressbar" aria-valuenow={75} aria-valuemin={0} aria-valuemax={100}>
-              <span className="skill">JavaScript <i className="val">75%</i></span>
-            </div>
-          </div>
-
-          <div className="progress">
-            <div className="progress-bar bg-danger" role="progressbar" aria-valuenow={55} aria-valuemin={0} aria-valuemax={100}>
-              <span className="skill">Photoshop <i className="val">55%</i></span>
-            </div>
-          </div>
-
+          ))}
         </div>
-
       </div>
     </section>
   );
-}
+};
 
 export default Skills;

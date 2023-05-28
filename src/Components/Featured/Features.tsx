@@ -52,7 +52,8 @@ const FeatureBox = (props:Ifeats) => {
     <div className={boxClassName}>
       <i className={props.icon}></i>
       <h4 className="title">
-        <a href="">{props.title}</a>
+        {/* eslint jsx-a11y/anchor-is-valid: 0 */}
+        <a>{props.title}</a>
       </h4>
       <p className="description">{props.description}</p>
     </div>
