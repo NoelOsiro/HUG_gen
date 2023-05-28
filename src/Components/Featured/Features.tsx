@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './feat.css';
 interface Ifeats {
   icon: string,
   title: string,
@@ -10,19 +10,19 @@ const Features = () => {
   const featureBoxes: Ifeats[] = [
     {
       icon: 'bi bi-award',
-      title: 'Lorem Ipsum Delino',
-      description: 'Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
+      title: 'Empower',
+      description: 'Empowering through education, training, and resources to create positive change in lives and communities.',
     },
     {
-      icon: 'bi bi-card-checklist',
-      title: 'Dolor Sitema',
-      description: 'Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata',
+      icon: 'bi bi-gender-trans',
+      title: 'Inclusivity',
+      description: 'Promote inclusivity by valuing and respecting diversity and ensuring that all voices are heard and represented, regardless of gender, race, ethnicity, religion, or socio-economic status.',
       isBackground: true,
     },
     {
-      icon: 'bi bi-binoculars',
-      title: 'Sed ut perspiciatis',
-      description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur',
+      icon: 'bi bi-globe-europe-africa',
+      title: 'Sustainability',
+      description: 'Prioritize sustainable practices & solutions.Promote eco-friendly practices, advocate for policies & empower individuals for a sustainable future',
     },
   ];
 

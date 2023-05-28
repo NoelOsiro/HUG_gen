@@ -1,0 +1,48 @@
+#featured-services {
+    background: #000;
+}
+
+#featured-services .box {
+    padding: 30px 20px;
+}
+#featured-services .box:hover {
+    background-color: #18d26e;
+    color: #000000;
+}
+#featured-services .box:hover i{
+    color: #000000;
+}
+#featured-services .box-bg:hover{
+    background-image: linear-gradient(0deg, #18d26e 0%, #46ac76 50%, #18d26e 100%);
+}
+
+#featured-services .box-bg {
+    background-image: linear-gradient(0deg, #000000 0%, #242323 50%, #000000 100%);
+}
+
+
+#featured-services i {
+    color: #18d26e;
+    font-size: 48px;
+    display: inline-block;
+    line-height: 1;
+}
+
+#featured-services h4 {
+    font-weight: 400;
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+#featured-services h4 a {
+    color: #fff;
+}
+
+
+
+#featured-services p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #fff;
+    margin-bottom: 0;
+}
