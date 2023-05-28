@@ -6,26 +6,31 @@ const Hero = () => {
       backgroundImage: "url(assets/img/hero-carousel/1.jpg)",
       title: "Serving our Generation",
       description: "Cultivating compassion, inspiring change, and serving our generation with unwavering dedication. Join us in making a difference!",
+      btnText:"Learn More"
     },
     {
       backgroundImage: "url(assets/img/hero-carousel/2.jpg)",
       title: "Be the change that you want to see",
-      description: "Be the change that you want to see. Join Humble Generation and empower communities through youth leadership and social impact.",
+      description: "Be the change that you want to see.Join hands and empower communities through youth leadership and social impact.",
+      btnText:"About Us"
     },
     {
       backgroundImage: "url(assets/img/hero-carousel/3.jpg)",
-      title: "Temporibus autem quibusdam",
-      description: "Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.",
+      title: "Inspiring Youth, Transforming Communities",
+      description: "Inspire, empower, and transform. Let's partner as we harness the power of youth to create thriving communities and a brighter future.",
+      btnText:"Projects"
     },
     {
       backgroundImage: "url(assets/img/hero-carousel/4.jpg)",
-      title: "Nam libero tempore",
-      description: "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum.",
+      title: "Building Bridges, Creating Impact",
+      description: "Break down barriers and build bridges of understanding. Join HuG in creating a lasting impact and fostering stronger, more compassionate communities.",
+      btnText:"Services"
     },
     {
       backgroundImage: "url(assets/img/hero-carousel/5.jpg)",
-      title: "Magnam aliquam quaerat",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "Amplify children voices",
+      description: "Empower their dreams, and witness the transformative impact. Stand with HuG and let our collective voice be heard.",
+      btnText:"Gallery"
     },
   ];
 
@@ -34,7 +39,7 @@ const Hero = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveSlide((prevSlide) => (prevSlide + 1) % carouselItems.length);
-    }, 5000);
+    }, 7000);
 
     return () => {
       clearInterval(intervalId);
@@ -75,7 +80,7 @@ const Hero = () => {
                   <div className="container">
                     <h2 className="animate__animated animate__fadeInDown">{item.title}</h2>
                     <p className="animate__animated animate__fadeInUp">{item.description}</p>
-                    <a href="#featured-services" className="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                    <a href="#featured-services" className="btn-get-started scrollto animate__animated animate__fadeInUp">{item.btnText}</a>
                   </div>
                 </div>
               </div>
