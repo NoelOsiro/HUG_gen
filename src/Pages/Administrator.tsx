@@ -1,12 +1,14 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 
 const Administrator = () => {
+  const { state: member = {} } = useLocation();
   return (
     <main id="main">
     <section className="breadcrumbs">
       <div className="container">
         <div className="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
+          <h2>{member.position}</h2>
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
@@ -44,7 +46,7 @@ const Administrator = () => {
 
           <div className="col-lg-4">
             <div className="portfolio-info">
-              <h3>Project information</h3>
+              <h3>{member.name}</h3>
               <ul>
                 <li><strong>Category</strong>: Web design</li>
                 <li><strong>Client</strong>: ASU Company</li>

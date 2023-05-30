@@ -14,12 +14,17 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Header />
+    
     <Router>
+    <Header />
       <Routes>  
         <Route path="/" element={<App />} />
         <Route path="/team/executive-director" element={<ExecutiveDirector />} />
         <Route path="/team/administrator" element={<Administrator />} />
+        <Route path="/team/opsfinance" element={<Administrator />} />
+        <Route path="/team/infosys" element={<Administrator />} />
+        <Route path="/team/progscord" element={<Administrator />} />
+        <Route path="/team/hr" element={<Administrator />} />
       </Routes>
     </Router>
 

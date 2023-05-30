@@ -732,6 +732,7 @@ section {
 
 #team .member .social {
   margin-top: 15px;
+  justify-content: space-between;
 }
 
 #team .member .social a {

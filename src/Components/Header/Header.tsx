@@ -7,7 +7,7 @@ const Header = ()=> {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const isTeamPage = location.pathname.includes('/team');
-  const headerBackground = isTeamPage ? 'black' : 'transparent';
+  const headerBackground = isTeamPage ? 'black' : '';
 
   useEffect(() => {
     const handleScroll = () => {
