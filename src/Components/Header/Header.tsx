@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './header.css';
 import { useLocation } from 'react-router-dom';
@@ -8,18 +8,6 @@ const Header = ()=> {
   const location = useLocation();
   const isTeamPage = location.pathname.includes('/team');
   const headerBackground = isTeamPage ? 'black' : '';
-  const handleSmoothScroll = (event: SyntheticEvent<HTMLAnchorElement>) => {
-    event.preventDefault();
-
-    const targetId = event.currentTarget.getAttribute('href')!;
-    const target = document.querySelector(targetId) as HTMLElement | null;
-    if (target) {
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth',
-      });
-    }
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,12 +37,12 @@ const Header = ()=> {
             <img src="assets/img/logo.png" alt="" className="img-fluid"/></a> */}
           <nav id="navbar" className="navbar">
             <ul>
-              <li><a className="nav-link scrollto active" href="#hero" onClick={handleSmoothScroll}>Home</a></li>
-              <li><a className="nav-link scrollto" href="#about" onClick={handleSmoothScroll}>About</a></li>
-              <li><a className="nav-link scrollto" href="#services" onClick={handleSmoothScroll}>Services</a></li>
-              <li><a className="nav-link scrollto " href="#portfolio" onClick={handleSmoothScroll}>Projects</a></li>
-              <li><a className="nav-link scrollto" href="#team" onClick={handleSmoothScroll}>Team</a></li>
-              <li><a className="nav-link  " href="blog.html" onClick={handleSmoothScroll}>Blog</a></li>
+              <li><a className="nav-link scrollto active" href="/#hero" >Home</a></li>
+              <li><a className="nav-link scrollto" href="/#about" >About</a></li>
+              <li><a className="nav-link scrollto" href="/#services" >Services</a></li>
+              <li><a className="nav-link scrollto " href="/#portfolio" >Projects</a></li>
+              <li><a className="nav-link scrollto" href="/#team" >Team</a></li>
+              <li><a className="nav-link  " href="blog.html" >Blog</a></li>
               {/* eslint jsx-a11y/anchor-is-valid: 0 */}
               <li className="dropdown"><a><span>Drop Down</span> <i className="bi bi-chevron-down"></i></a>
                 <ul>
