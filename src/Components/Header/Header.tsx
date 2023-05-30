@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
+
 import './header.css';
+import { useLocation } from 'react-router-dom';
 
 const Header = ()=> {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const isTeamPage = location.pathname.includes('/team');
+  const headerBackground = isTeamPage ? 'black' : 'transparent';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +28,7 @@ const Header = ()=> {
     };
   }, []);
   return (
-    <header id="header" className={`fixed-top d-flex align-items-center ${isScrolled ? 'scrolled' : 'header-transparent'}`}>
+    <header id="header" className={`fixed-top d-flex align-items-center ${isScrolled ? 'scrolled' : 'header-transparent'}`} style={{ background: headerBackground }}>
     <div className="container-fluid">
       <div className="row justify-content-center align-items-center">
         <div className="col-xl-11 d-flex align-items-center justify-content-between">

@@ -13,7 +13,7 @@ const Teams = () => {
       name: 'Linet Awuor',
       position: 'Administrator',
       image: 'assets/img/linet1.JPG',
-      slug: 'admininistrator',
+      slug: 'administrator',
     },
     {
       name: 'Mike Dimo',
