@@ -32,13 +32,13 @@ const Administrator = () => {
              slidesPerView={'auto'}>
               <div className="swiper-wrapper align-items-center">
                 <SwiperSlide>
-                  <img src="../../assets/img/portfolio/portfolio-details-1.jpg" alt=""/>
+                  <img src={member.imagefull1} alt=""  height={800}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="../../assets/img/portfolio/portfolio-details-2.jpg" alt=""/>
+                  <img src={member.imagefull2} alt="" height={800}/>
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src="../../assets/img/portfolio/portfolio-details-3.jpg" alt=""/>
+                  <img src="../../assets/img/portfolio/portfolio-details-3.jpg" alt="" className='img-fluid'/>
                 </SwiperSlide>
               </div>
               <div className="swiper-pagination"></div>
@@ -55,7 +55,7 @@ const Administrator = () => {
               </ul>
             </div>
             <div className="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Who am I?</h2>
               <p>
                 {member.bio}
               </p>
