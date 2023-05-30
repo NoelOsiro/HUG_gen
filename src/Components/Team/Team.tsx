@@ -5,6 +5,8 @@ const Teams = () => {
   const teamMembers = [
     {
       name: 'Isaiah Nyandwaro',
+      phone: '+254 714 956717',
+      email: '@humblegeneration.co.ke',
       position: 'Executive Director',
       image: 'assets/img/izzo1.JPG',
       slug: 'executive-director',
@@ -12,6 +14,8 @@ const Teams = () => {
     },
     {
       name: 'Linet Awuor',
+      phone: '+254 112904413',
+      email: '@humblegeneration.co.ke',
       position: 'Administrator',
       image: 'assets/img/linet1.JPG',
       slug: 'administrator',
@@ -19,6 +23,8 @@ const Teams = () => {
     },
     {
       name: 'Mike Dimo',
+      phone: '+254 724 696342',
+      email: '@humblegeneration.co.ke',
       position: 'Operations and Finance',
       image: 'assets/img/dimo1.jpg',
       slug: 'opsfinance',
@@ -26,13 +32,17 @@ const Teams = () => {
     },
     {
       name: 'Noel Osiro',
+      phone: '+254 729732440',
+      email: '@humblegeneration.co.ke',
       position: 'Information Systems',
       image: 'assets/img/team-4.jpg',
       slug: 'infosys',
-      bio: '',
+      bio: 'As a highly skilled and experienced Cloud Solutions Architect, I specialize in providing cutting-edge IT solutions for community-based organizations. With a strong background in cloud technologies and a passion for empowering communities, I am dedicated to leveraging technology to drive positive change. My expertise includes designing and implementing scalable cloud architectures, optimizing cloud infrastructure for cost-efficiency, ensuring data security and privacy, and integrating cloud solutions with existing systems. I am committed to helping community-based organizations leverage the power of cloud technology to enhance their operations, streamline processes, and ultimately make a lasting impact in the communities they serve.',
     },
     {
       name: 'Daniel Mogaka',
+      phone: '+254 720750837',
+      email: '@humblegeneration.co.ke',
       position: 'Programmes Co-ordinator',
       image: 'assets/img/dan.jpeg',
       slug: 'progscord',
@@ -40,6 +50,8 @@ const Teams = () => {
     },
     {
       name: 'Phostine Ondimu',
+      phone: '+254 720 549898',
+      email: '@humblegeneration.co.ke',
       position: 'Human Resource',
       image: 'assets/img/phostine.jpeg',
       slug: 'hr',

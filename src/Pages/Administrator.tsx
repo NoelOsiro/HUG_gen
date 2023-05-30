@@ -1,5 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom';
+import { Pagination, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const Administrator = () => {
   const { state: member = {} } = useLocation();
@@ -22,34 +24,32 @@ const Administrator = () => {
       <div className="container">
 
         <div className="row gy-4">
-
           <div className="col-lg-8">
-            <div className="portfolio-details-slider swiper">
+            <Swiper className="portfolio-details-slider swiper"
+             pagination={true}
+             modules={[Pagination, Autoplay]}
+             autoplay={{ delay: 5000 }}
+             slidesPerView={'auto'}>
               <div className="swiper-wrapper align-items-center">
-
-                <div className="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt=""/>
-                </div>
-
-                <div className="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt=""/>
-                </div>
-
-                <div className="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt=""/>
-                </div>
-
+                <SwiperSlide>
+                  <img src="../../assets/img/portfolio/portfolio-details-1.jpg" alt=""/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="../../assets/img/portfolio/portfolio-details-2.jpg" alt=""/>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <img src="../../assets/img/portfolio/portfolio-details-3.jpg" alt=""/>
+                </SwiperSlide>
               </div>
               <div className="swiper-pagination"></div>
-            </div>
+            </Swiper>
           </div>
-
           <div className="col-lg-4">
             <div className="portfolio-info">
               <h3>{member.name}</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
+                <li><strong>Phone</strong>: {member.phone}</li>
+                <li><strong>Email</strong>: {member.email}</li>
                 <li><strong>Project date</strong>: 01 March, 2020</li>
                 <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
               </ul>
@@ -57,7 +57,7 @@ const Administrator = () => {
             <div className="portfolio-description">
               <h2>This is an example of portfolio detail</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {member.bio}
               </p>
             </div>
           </div>
