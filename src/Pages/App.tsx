@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Header from '../Components/Header/Header';
-import Hero from '../Components/Hero/Hero';
 import Contacts from '../Components/Contact/Contact';
 import Teams from '../Components/Team/Team';
 import Testimonials from '../Components/Testimonials/Testiomony';
