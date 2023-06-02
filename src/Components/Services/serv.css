@@ -13,7 +13,7 @@
 }
 
 #services .icon i {
-    color: #18d26e;
+    color: #084298;
     font-size: 36px;
     line-height: 0;
     transition: 0.5s;
@@ -31,7 +31,7 @@
 }
 
 #services .box:hover .title a {
-    color: #18d26e;
+    color: #084298;
 }
 
 #services .description {

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './facts.css';
 
 interface FactItem {
   start: number;
@@ -54,11 +55,6 @@ const Facts: React.FC = () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, [counted]);
-
-  
-
-  
-
   return (
     <section id="facts">
       <div className="container" data-aos="fade-up">
@@ -82,7 +78,7 @@ const Facts: React.FC = () => {
         </div>
 
         <div className="facts-img">
-          <img src="assets/img/facts-img.jpg" alt="" className="img-fluid" />
+          <img src="assets/img/facts-img.jpg" alt=""  />
         </div>
       </div>
     </section>

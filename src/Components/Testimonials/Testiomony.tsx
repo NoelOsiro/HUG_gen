@@ -25,7 +25,7 @@ const testimonialData = [
     testimonial: 'As a parent in the community, I am incredibly grateful for Hubmble Generations dedication to addressing child abuse. They have implemented various awareness campaigns and workshops that have educated parents and caregivers about the signs of abuse and how to prevent it. I feel more empowered and equipped to protect my children thanks to their efforts.',
   },
   {
-    imgSrc: 'assets/img/testimonial-4.jpg',
+    imgSrc: 'assets/img/team-4.webp',
     name: 'Noel Osiro',
     role: 'ICT',
     testimonial: 'Fostering a sense of community and solidarity among its members. Through various community engagement initiatives, they have encouraged dialogue, collaboration, and collective action to address the pressing issues we face. Their efforts have strengthened social bonds, promoted empathy, and inspired individuals to take an active role in creating positive change.',

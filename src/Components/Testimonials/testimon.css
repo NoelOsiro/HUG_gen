@@ -71,9 +71,9 @@
     height: 12px;
     background-color: #fff;
     opacity: 1;
-    border: 1px solid #18d26e;
+    border: 1px solid #084298;
   }
   
   #testimonials .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: #18d26e;
+    background-color: #084298;
   }

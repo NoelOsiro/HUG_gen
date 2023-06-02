@@ -6,14 +6,14 @@
     padding: 30px 20px;
 }
 #featured-services .box:hover {
-    background-color: #18d26e;
+    background-color: #084298;
     color: #000000;
 }
 #featured-services .box:hover i{
     color: #000000;
 }
 #featured-services .box-bg:hover{
-    background-image: linear-gradient(0deg, #18d26e 0%, #46ac76 50%, #18d26e 100%);
+    background-image: linear-gradient(0deg, #084298 0%, #46ac76 50%, #084298 100%);
 }
 
 #featured-services .box-bg {
@@ -22,7 +22,7 @@
 
 
 #featured-services i {
-    color: #18d26e;
+    color: #084298;
     font-size: 48px;
     display: inline-block;
     line-height: 1;

@@ -37,7 +37,7 @@ export const teamMembers = [
       phone: '+254 729732440',
       email: '@humblegeneration.co.ke',
       position: 'Information Systems',
-      image: 'assets/img/team-4.jpg',
+      image: 'assets/img/team-4.webp',
       imagefull1: '../../assets/img/portfolio/phostinefull.jpeg',
       imagefull2: '../../assets/img/portfolio/phostinefull2.jpeg',
       slug: 'infosys',

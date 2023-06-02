@@ -41,7 +41,7 @@
     height: 64px;
     text-align: center;
     position: absolute;
-    background-color: #18d26e;
+    background-color: #084298;
     border-radius: 50%;
     border: 4px solid #fff;
     left: calc(50% - 32px);
@@ -64,7 +64,7 @@
 }
 
 #about .about-col:hover i {
-    color: #18d26e;
+    color: #084298;
 }
 
 #about .about-col h2 {
@@ -81,7 +81,7 @@
 }
 
 #about .about-col h2 a:hover {
-    color: #18d26e;
+    color: #084298;
 }
 
 #about .about-col p {
