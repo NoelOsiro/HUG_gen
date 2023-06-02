@@ -7,7 +7,7 @@ const Contacts = ()=> {
 
         <div className="section-header">
           <h3>Contact Us</h3>
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p>Reach out for any assistance.</p>
         </div>
 
         <div className="row contact-info">
@@ -16,7 +16,7 @@ const Contacts = ()=> {
             <div className="contact-address">
               <i className="bi bi-geo-alt"></i>
               <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <address>Malindi Complex, Lamu Road, Kilifi, Kenya</address>
             </div>
           </div>
 
@@ -24,7 +24,7 @@ const Contacts = ()=> {
             <div className="contact-phone">
               <i className="bi bi-phone"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <p><a href="tel:+155895548855">+254 123 4563</a></p>
             </div>
           </div>
 
@@ -32,7 +32,7 @@ const Contacts = ()=> {
             <div className="contact-email">
               <i className="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:info@example.com">info@humblegeneration.com</a></p>
             </div>
           </div>
 

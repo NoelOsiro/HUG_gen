@@ -7,7 +7,7 @@ import { Pagination, Autoplay } from 'swiper';
 
 const testimonialData = [
   {
-    imgSrc: 'assets/img/izzo1.JPG',
+    imgSrc: 'assets/img/izzo1.jpg',
     name: 'Isaiah Nyandwaro',
     role: 'Executive Director',
     testimonial: 'Orphans and vulnerable children often face immense challenges and are at a higher risk of marginalization. Hubmble Generation has been a beacon of hope for these children, providing them with a support system, access to education, and necessary resources. Their holistic approach has transformed the lives of many vulnerable children in our community, giving them a chance for a brighter future.',
