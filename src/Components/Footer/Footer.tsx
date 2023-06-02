@@ -18,24 +18,24 @@ function Footer() {
                             <ul>
                                 <li>
                                     <i className="bi bi-chevron-right"></i>
-                                    <a href="#">Home</a>
+                                    <a href="/">Home</a>
                                 </li>
                                 <li>
                                     <i className="bi bi-chevron-right"></i>
-                                    <a href="#">About us</a>
+                                    <a href="/#about">About us</a>
                                 </li>
                                 <li>
                                     <i className="bi bi-chevron-right"></i>
-                                    <a href="#">Services</a>
+                                    <a href="/#services">Activities</a>
                                 </li>
                                 <li>
                                     <i className="bi bi-chevron-right">
                                     </i>
-                                    <a href="#">Terms of service</a>
+                                    <a href="/#portfolio">Projects</a>
                                 </li>
                                 <li>
                                     <i className="bi bi-chevron-right"></i>
-                                    <a href="#">Privacy policy</a>
+                                    <a href="/participate">Participate</a>
                                 </li>
                             </ul>
                         </div>
