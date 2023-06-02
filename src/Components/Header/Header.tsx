@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import './header.css';
 import { useLocation } from 'react-router-dom';
 
@@ -8,7 +7,6 @@ const Header = ()=> {
   const location = useLocation();
   const isTeamPage = location.pathname.includes('/team');
   const headerBackground = isTeamPage ? 'black' : '';
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -20,9 +18,7 @@ const Header = ()=> {
         setIsScrolled(isScrollWithinDesiredSection);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -39,7 +35,7 @@ const Header = ()=> {
             <ul>
               <li><a className="nav-link scrollto active" href="/#hero" >Home</a></li>
               <li><a className="nav-link scrollto" href="/#about" >About</a></li>
-              <li><a className="nav-link scrollto" href="/#services" >Services</a></li>
+              <li><a className="nav-link scrollto" href="/#services" >Activities</a></li>
               <li><a className="nav-link scrollto " href="/#portfolio" >Projects</a></li>
               <li><a className="nav-link scrollto" href="/#team" >Team</a></li>
               <li><a className="nav-link  " href="blog.html" >Blog</a></li>

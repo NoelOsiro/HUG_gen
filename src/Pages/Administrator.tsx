@@ -32,10 +32,10 @@ const Administrator = () => {
              slidesPerView={'auto'}>
               <div className="swiper-wrapper align-items-center">
                 <SwiperSlide>
-                  <img src={member.imagefull1} alt=""  height={800}/>
+                  <img src={member.imagefull1} alt="" className='img-fluid' />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={member.imagefull2} alt="" height={800}/>
+                  <img src={member.imagefull2} alt="" className='img-fluid'/>
                 </SwiperSlide>
                 <SwiperSlide>
                   <img src="../../assets/img/portfolio/portfolio-details-3.jpg" alt="" className='img-fluid'/>

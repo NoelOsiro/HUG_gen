@@ -64,7 +64,7 @@ const Facts: React.FC = () => {
       <div className="container" data-aos="fade-up">
         <header className="section-header">
           <h3>Facts</h3>
-          <p>How many livesHuG has affected so far.</p>
+          <p>How many lives HuG has affected so far.</p>
         </header>
 
         <div className="row counters">
@@ -82,7 +82,7 @@ const Facts: React.FC = () => {
         </div>
 
         <div className="facts-img">
-          <img src="assets/img/facts-img.png" alt="" className="img-fluid" />
+          <img src="assets/img/facts-img.jpg" alt="" className="img-fluid" />
         </div>
       </div>
     </section>

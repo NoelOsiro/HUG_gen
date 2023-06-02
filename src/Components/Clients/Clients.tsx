@@ -7,14 +7,11 @@ import { Pagination, Autoplay } from 'swiper';
 
 const Clients = () => {
   const clientImages = [
-    'assets/img/clients/client-1.png',
-    'assets/img/clients/client-2.png',
-    'assets/img/clients/client-3.png',
-    'assets/img/clients/client-4.png',
-    'assets/img/clients/client-5.png',
-    'assets/img/clients/client-6.png',
-    'assets/img/clients/client-7.png',
-    'assets/img/clients/client-8.png',
+    'assets/img/clients/almasi.jpg',
+    'assets/img/clients/ccompassion.png',
+    'assets/img/clients/OIP.jpg',
+    'assets/img/clients/endless.jpg',
+    'assets/img/clients/emerald.png',
   ];
 
   return (
@@ -41,7 +38,7 @@ const Clients = () => {
               slidesPerView: 4,
             },
             992: {
-              slidesPerView: 6,
+              slidesPerView: 5,
             },
           }}
         >

@@ -3,10 +3,10 @@ import React from 'react';
 const Portfolio = () => {
   const projects = [
     { id: 1, filter: 'children', title: 'Food programme', category: 'Children', image: 'app1.jpg' },
-    { id: 2, filter: 'women', title: 'Reproductive Health', category: 'Women', image: 'web3.jpg' },
+    { id: 2, filter: 'youth', title: 'Creative Arts', category: 'Youth', image: 'web3.jpg' },
     { id: 3, filter: 'children', title: 'Education', category: 'Children', image: 'app2.jpg' },
     { id: 4, filter: 'children', title: 'Talent show', category: 'Youth', image: 'card2.jpg' },
-    { id: 5, filter: 'women', title: 'Web 2', category: 'Women', image: 'web2.jpg' },
+    { id: 5, filter: 'women', title: 'Business Education', category: 'Women', image: 'web2.jpg' },
     { id: 6, filter: 'children', title: 'Reproductive Health', category: 'Children', image: 'app3.jpg' },
     { id: 7, filter: 'youth', title: 'Education', category: 'Youth', image: 'card1.jpg' },
     { id: 8, filter: 'youth', title: 'Skills search', category: 'Youth', image: 'card3.jpg' },
