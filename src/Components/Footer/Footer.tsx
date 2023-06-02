@@ -10,7 +10,7 @@ function Footer() {
                         <div className="col-lg-3 col-md-6 footer-info">
                             <h3>Humble Generation</h3>
                             <p>
-                                Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.
+                                We can't help everyone but everyone can help someone.
                             </p>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-links">
@@ -61,8 +61,8 @@ function Footer() {
                             </div>
                         </div>
                         <div className="col-lg-3 col-md-6 footer-newsletter">
-                            <h4>Our Newsletter</h4>
-                            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna veniam enim veniam illum dolore legam minim quorum culpa amet magna export quem marada parida nodela caramase seza.</p>
+                            <h4>Our Blog</h4>
+                            <p>Catch all the latest activities our organization does and follow us on social media</p>
                             <form action="" method="post">
                                 <input type="email" name="email" />
                                 <input type="submit" value="Subscribe" />
@@ -72,7 +72,8 @@ function Footer() {
                 </div>
             </div>
             <div className="container">
-                <div className="copyright"> &copy; Copyright <strong>BizPage</strong>. All Rights Reserved </div> <div className="credits"> Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                <div className="copyright"> &copy; Copyright <strong>HuG</strong>. All Rights Reserved </div>
+                <div className="credits"> Designed by <a href="https://github.com/NoelOsiro/">Noel Osiro</a>
                 </div>
             </div>
         </footer>
