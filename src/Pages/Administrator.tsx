@@ -22,7 +22,6 @@ const Administrator = () => {
     </section>
     <section id="portfolio-details" className="portfolio-details">
       <div className="container">
-
         <div className="row gy-4">
           <div className="col-lg-8">
             <Swiper className="portfolio-details-slider swiper"
@@ -61,9 +60,7 @@ const Administrator = () => {
               </p>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
   </main>

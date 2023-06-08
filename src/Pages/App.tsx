@@ -17,7 +17,7 @@ import Footer from '../Components/Footer/Footer';
 function App() {
   return (
     <>
-    <Hero />
+      <Hero />
       <main id="main">
         <Features />
         <About />
@@ -31,10 +31,10 @@ function App() {
         <Teams />
         <Contacts />
       </main>
-      <Footer/>
-                </>
-                );
+      <Footer />
+    </>
+  );
 
 }
 
-                export default App;
+export default App;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './hero.css';
 
 const Hero = () => {
   const carouselItems = [
@@ -33,9 +34,7 @@ const Hero = () => {
       btnText:"Gallery"
     },
   ];
-
   const [activeSlide, setActiveSlide] = useState(0);
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setActiveSlide((prevSlide) => (prevSlide + 1) % carouselItems.length);
@@ -45,11 +44,9 @@ const Hero = () => {
       clearInterval(intervalId);
     };
   }, [carouselItems.length]);
-
   const handleSlideTo = (slideIndex:number) => {
     setActiveSlide(slideIndex);
   };
-
   return (
     <section id="hero">
       <div className="hero-container">
