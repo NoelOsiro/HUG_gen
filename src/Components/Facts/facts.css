@@ -67,3 +67,49 @@
     border-radius: 25px;
 
 }
+/* Response small 320px */
+@media only screen and (max-width: 320px) {
+    .facts-img img {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .facts-img::before {
+        border: none;
+    }
+}
+/* Response small 375px */
+@media only screen and (max-width: 375px) and (min-width:321px) {
+    .facts-img img {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .facts-img::before {
+        border: none;
+    }
+}
+
+/* Response mid 425px */
+@media only screen and (max-width: 425px) and (min-width:376px) {
+    .facts-img img {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .facts-img::before {
+        border: none;
+    }
+}
+
+/* Response tablet 768px */
+@media only screen and (max-width: 768px) and (min-width:426px) {
+    .facts-img img {
+        width: 100%;
+        border-radius: 0px;
+    }
+    .facts-img::before {
+        border: none;
+    }
+}
+
+/* Response desktop 1440px */
+@media only screen and (max-width: 1440px) and (min-width:769px) {
+}

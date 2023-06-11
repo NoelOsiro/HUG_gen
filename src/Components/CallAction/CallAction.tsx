@@ -1,4 +1,5 @@
 import React from 'react';
+import './call.css';
 
 const CallAction = ()=> {
   return (

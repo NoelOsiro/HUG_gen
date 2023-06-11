@@ -1,0 +1,73 @@
+#call-to-action {
+    background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../../../public/assets/img/call-to-action-bg.jpg) fixed center center;
+    background-size: cover;
+    padding: 60px 0;
+}
+
+#call-to-action h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#call-to-action p {
+    color: #fff;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+#call-to-action .cta-btn {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+}
+
+#call-to-action .cta-btn:hover {
+    background: #084298;
+    border: 2px solid #084298;
+}
+
+/* Response small 320px */
+@media only screen and (max-width: 320px) {
+    #call-to-action {
+        padding: 40px 0;
+    }
+}
+
+/* Response small 375px */
+@media only screen and (max-width: 375px) and (min-width:321px) {
+    #call-to-action {
+        padding: 40px 0;
+    }
+}
+
+/* Response mid 425px */
+@media only screen and (max-width: 425px) and (min-width:376px) {
+    #call-to-action {
+        padding: 40px 0;
+    }
+}
+
+/* Response tablet 768px */
+@media only screen and (max-width: 768px) and (min-width:426px) {
+    #call-to-action {
+        padding: 40px 0;
+    }
+}
+
+/* Response desktop 1440px */
+@media only screen and (max-width: 1440px) and (min-width:769px) {
+    #call-to-action {
+        padding: 40px 0;
+    }
+}

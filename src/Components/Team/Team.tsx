@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { teamMembers } from './teams';
+import './teams.css';
 
 const Teams = () => {
   return (

@@ -43,12 +43,12 @@ const Header = () => {
             </div>
             <nav id="navbar" className={`navbar ${isMobileNavOpen ? 'navbar-mobile' : ''}`}>
               <ul>
-                <li><a className="nav-link active" href="/#hero">Home</a></li>
-                <li><a className="nav-link" href="/#about">About</a></li>
-                <li><a className="nav-link" href="/#services">Activities</a></li>
-                <li><a className="nav-link" href="/#portfolio">Projects</a></li>
-                <li><a className="nav-link" href="/#team">Team</a></li>
-                <li><a className="nav-link" href="blog.html">Blog</a></li>
+                <li><a className="nav-link active" href="/#hero" onClick={()=>setIsMobileNavOpen(false)}>Home</a></li>
+                <li><a className="nav-link" href="/#about" onClick={()=>setIsMobileNavOpen(false)}>About</a></li>
+                <li><a className="nav-link" href="/#services" onClick={()=>setIsMobileNavOpen(false)}>Activities</a></li>
+                <li><a className="nav-link" href="/#portfolio" onClick={()=>setIsMobileNavOpen(false)}>Projects</a></li>
+                <li><a className="nav-link" href="/#team" onClick={()=>setIsMobileNavOpen(false)}>Team</a></li>
+                <li><a className="nav-link" href="blog.html" onClick={()=>setIsMobileNavOpen(false)}>Blog</a></li>
                 {/* eslint jsx-a11y/anchor-is-valid: 0 */}
                 <li className="dropdown">
                   <a>
@@ -74,7 +74,7 @@ const Header = () => {
                     <li><a href="/">Reach Us</a></li>
                   </ul>
                 </li>
-                <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
+                <li><a className="nav-link scrollto" href="/#contact" onClick={()=>setIsMobileNavOpen(false)}>Contact</a></li>
               </ul>
               <i className={`bi mobile-nav-toggle ${isMobileNavOpen ? 'bi-x' : 'bi-list'}`} onClick={toggleMobileNav}></i>
             </nav>

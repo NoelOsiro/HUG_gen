@@ -46,7 +46,7 @@ const Features = () => {
 };
 
 const FeatureBox = (props:Ifeats) => {
-  const boxClassName = `col-lg-4 box ${props.isBackground ? 'box-bg' : ''}`;
+  const boxClassName = `col-lg-4 col-md-12 col-sm-12 box ${props.isBackground ? 'box-bg' : ''}`;
 
   return (
     <div className={boxClassName}>

@@ -65,7 +65,6 @@ const Hero = () => {
               ></button>
             ))}
           </div>
-
           <div className="carousel-inner" role="listbox">
             {carouselItems.map((item, index) => (
               <div
@@ -83,14 +82,6 @@ const Hero = () => {
               </div>
             ))}
           </div>
-
-          <a className="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev" onClick={() => handleSlideTo((activeSlide - 1 + carouselItems.length) % carouselItems.length)}>
-            <span className="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-          </a>
-
-          <a className="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next" onClick={() => handleSlideTo((activeSlide + 1) % carouselItems.length)}>
-            <span className="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-          </a>
         </div>
       </div>
     </section>

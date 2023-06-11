@@ -38,7 +38,7 @@ const About = () => {
 
         <div className="row about-cols">
           {aboutData.map((item, index) => (
-            <div className="col-md-4" data-aos="fade-up" data-aos-delay={100 * (index + 1)} key={index}>
+            <div className="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay={100 * (index + 1)} key={index}>
               <div className="about-col">
                 <div className="img">
                   <img src={item.imgSrc} alt="" className="img-fluid" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import './port.css';
 
 const Portfolio = () => {
   const projects = [
@@ -43,7 +44,7 @@ const Portfolio = () => {
                 <figure>
                   <img
                     src={`assets/img/portfolio/${project.image}`}
-                    className="img-fluid"
+                    className="img-fluid2"
                     alt=""
                   />
                   <a

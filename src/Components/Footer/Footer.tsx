@@ -1,4 +1,5 @@
 import React from 'react';
+import './footer.css';
 
 
 function Footer() {
@@ -63,7 +64,7 @@ function Footer() {
                         </div>
                         <div className="col-lg-3 col-md-6 footer-newsletter">
                             <h4>Our Blog</h4>
-                            <p>Catch all the latest activities our organization does and follow us on social media</p>
+                            <p className='px-3 py-2'>Catch all the latest activities our organization does and follow us on social media</p>
                             <form action="" method="post">
                                 <input type="email" name="email" />
                                 <input type="submit" value="Subscribe" />

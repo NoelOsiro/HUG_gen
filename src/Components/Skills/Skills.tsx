@@ -25,8 +25,6 @@ const Skills: React.FC = () => {
 
       const animateProgressBar = () => {
         progressBar.style.width = `${currentValue}%`;
-        progressBar.querySelector('.val')!.textContent = `${Math.floor(currentValue)}%`;
-
         if (currentValue < targetValue) {
           currentValue += increment;
           requestAnimationFrame(animateProgressBar);
@@ -47,9 +45,7 @@ const Skills: React.FC = () => {
         });
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -77,7 +73,7 @@ const Skills: React.FC = () => {
                 aria-valuemin={0}
                 aria-valuemax={100}
               >
-                <span className="skill">{skill.name} <i className="val">0%</i></span>
+                <span className="skill">{skill.name}</span>
               </div>
             </div>
           ))}

@@ -5,14 +5,17 @@
 #featured-services .box {
     padding: 30px 20px;
 }
+
 #featured-services .box:hover {
     background-color: #084298;
     color: #000000;
 }
-#featured-services .box:hover i{
+
+#featured-services .box:hover i {
     color: #000000;
 }
-#featured-services .box-bg:hover{
+
+#featured-services .box-bg:hover {
     background-image: linear-gradient(0deg, #084298 0%, #46ac76 50%, #084298 100%);
 }
 
@@ -45,4 +48,102 @@
     line-height: 24px;
     color: #fff;
     margin-bottom: 0;
+}
+
+/* Response small 320px */
+@media only screen and (max-width: 320px) {
+    #featured-services .box {
+        padding: 30px 10px;
+    }
+
+    #featured-services h4 {
+        margin: 25px 0;
+        font-size: 26px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #featured-services p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+}
+
+/* Response small 375px */
+@media only screen and (max-width: 375px) and (min-width:321px) {
+    #featured-services .box {
+        padding: 30px 12px;
+    }
+
+    #featured-services h4 {
+        margin: 22px 0;
+        font-size: 25px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #featured-services p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+}
+
+/* Response mid 425px */
+@media only screen and (max-width: 425px) and (min-width:376px) {
+    #featured-services .box {
+        padding: 30px 15px;
+    }
+
+    #featured-services h4 {
+        margin: 25px 0px;
+        font-size: 26px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #featured-services p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+}
+
+/* Response tablet 768px */
+@media only screen and (max-width: 768px) and (min-width:426px) {
+    #featured-services .box {
+        padding: 30px 10px;
+    }
+
+    #featured-services h4 {
+        margin: 25px 0;
+        font-size: 26px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #featured-services p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+}
+
+/* Response desktop 1440px */
+@media only screen and (max-width: 1440px) and (min-width:769px) {
+    #featured-services .box {
+        padding: 30px 10px;
+    }
+
+    #featured-services h4 {
+        margin: 25px 0;
+        font-size: 26px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    #featured-services p {
+        font-size: 16px;
+        line-height: 30px;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
 }
