@@ -1,15 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'owl.carousel/dist/assets/owl.carousel.css';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Root from './routes/route';
+import ContactPage from './Pages/ContactPage';
+import AboutPage from './Pages/AboutPage';
+import CausesPage from './Pages/CausesPage';
+import EventsPage from './Pages/EventsPage';
+import DonatePage from './Pages/DonatePage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        path: "",
+        element: <App />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "about",
+        element: <AboutPage />,
+      },
+      {
+        path: "cause",
+        element: <CausesPage />,
+      },
+      {
+        path: "event",
+        element: <EventsPage />,
+      },
+      {
+        path: "donate",
+        element: <DonatePage />,
+      },
+    ],
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+     <RouterProvider router={router} />
   </React.StrictMode>
 );
 

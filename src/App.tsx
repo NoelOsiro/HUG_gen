@@ -1,25 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Topbar from './Components/TopBar/Topbar';
+import Navbar from './Components/Navbar/Navbar';
+import Carousel from './Components/Carousel/Carousel';
+import VideoModal from './Components/Modal/VideoModal';
+import About from './Components/About/About';
+import Service from './Components/Services/Service';
+import Facts from './Components/Facts/Facts';
+import Cause from './Components/Causes/Cause';
+import Donate from './Components/Donate/Donate';
+import Event from './Components/Event/Event';
+import Team from './Components/Team/Team';
+import Volun from './Components/Volunteer/Volun';
+import Testimonials from './Components/Testimonials/Testimonials';
+import Contact from './Components/Contact/Contact';
+import Blog from './Components/Blog/Blog';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Carousel />
+      <VideoModal />
+      <About />
+      <Service />
+      <Facts />
+      <Cause />
+      <Donate />
+      <Event />
+      <Contact />
+      {/* <Blog /> */}
+    </>
+
   );
 }
 
