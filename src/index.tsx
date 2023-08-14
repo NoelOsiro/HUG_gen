@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import reportWebVitals from './reportWebVitals';
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
+import {RouterProvider, createBrowserRouter} from 'react-router-dom';
 import Root from './routes/route';
 import ErrorPage from './Pages/ErrorPage';
 import Preloader from './Components/Preloader/Preloader';

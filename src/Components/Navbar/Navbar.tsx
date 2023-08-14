@@ -62,7 +62,7 @@ const Navbar = () => {
                         <div className={`nav-item dropdown ${isDropdownOpen ? 'show' : ''}`}
                             onMouseEnter={handleDropdownToggle}
                             onMouseLeave={handleDropdownClose}>
-                            <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                            <button className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</button>
                             <div className={`dropdown-menu ${isDropdownOpen ? 'show' : ''}`}>
                                 <a href="/blog" className="dropdown-item">Blog</a>
                                 <a href="/gallery" className="dropdown-item">Gallery</a>

@@ -45,17 +45,6 @@ const Testimonials = () => {
     });
   }, []);
 
-  const owlCarouselOptions = {
-    items: 1,
-    autoplay: true,
-    center: true,
-    dots: true,
-    loop: true,
-    responsive: {
-      768: { items: 2 },
-      992: { items: 3 }
-    }
-  };
 
   return (
     <div className="testimonial">
