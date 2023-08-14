@@ -4,44 +4,78 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import reportWebVitals from './reportWebVitals';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import Root from './routes/route';
-import ContactPage from './Pages/ContactPage';
-import AboutPage from './Pages/AboutPage';
-import CausesPage from './Pages/CausesPage';
-import EventsPage from './Pages/EventsPage';
-import DonatePage from './Pages/DonatePage';
 import ErrorPage from './Pages/ErrorPage';
+import Preloader from './Components/Preloader/Preloader';
+const Home = React.lazy(() => import('./App'));
+const About = React.lazy(() => import('./Pages/AboutPage'));
+const Causes = React.lazy(() => import('./Pages/CausesPage'));
+const Events = React.lazy(() => import('./Pages/EventsPage'));
+const Donate = React.lazy(() => import('./Pages/DonatePage'));
+const Contact = React.lazy(() => import('./Pages/ContactPage'));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
-        element: <App />,
+        path: '',
+        element: (
+          <React.Suspense fallback={<div>...</div>}>
+            <Home />
+          </React.Suspense>
+        ),
       },
       {
-        path: "contact",
-        element: <ContactPage />,
+        path: 'contact',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <Contact />
+          </React.Suspense>
+        ),
       },
       {
-        path: "about",
-        element: <AboutPage />,
+        path: 'about',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <About />
+          </React.Suspense>
+        ),
       },
       {
-        path: "cause",
-        element: <CausesPage />,
+        path: 'cause',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <Causes />
+          </React.Suspense>
+        ),
       },
       {
-        path: "event",
-        element: <EventsPage />,
+        path: 'event',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <Events />
+          </React.Suspense>
+        ),
       },
       {
-        path: "donate",
-        element: <DonatePage />,
+        path: 'donate',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <Donate />
+          </React.Suspense>
+        ),
+      },
+      {
+        path: 'volunteer',
+        element: (
+          <React.Suspense fallback={<Preloader/>}>
+            <Donate />
+          </React.Suspense>
+        ),
       },
     ],
   },
@@ -52,7 +86,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
