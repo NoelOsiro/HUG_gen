@@ -268,6 +268,16 @@ a:focus {
     margin-right: 20px;
     
 }
+@media only screen and (max-width: 768px) {
+    .navbar .navbar-logo {
+        font-size: 33px;
+        text-align: center;   
+    }
+    .navbar .nav-text {
+        font-size: 16px;
+        text-align: center;  
+    }
+  }
 .divider {
     margin-right: 20px;
     border-right: #209cf5 solid 4px;
