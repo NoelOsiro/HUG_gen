@@ -11,11 +11,13 @@ import AboutPage from './Pages/AboutPage';
 import CausesPage from './Pages/CausesPage';
 import EventsPage from './Pages/EventsPage';
 import DonatePage from './Pages/DonatePage';
+import ErrorPage from './Pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "",

@@ -4,6 +4,7 @@ import Facts from '../Components/Facts/Facts'
 import Team from '../Components/Team/Team'
 import Testimonials from '../Components/Testimonials/Testimonials'
 
+
 const AboutPage = () => {
   return (
     <>
@@ -20,7 +21,9 @@ const AboutPage = () => {
                 </div>
             </div>
         </div>
-        <About/>
+        <div style={{marginTop:'40%'}}>
+      <About />
+      </div>
         <Facts/>
         <Team/>
         <Testimonials/>

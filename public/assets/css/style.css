@@ -2,17 +2,17 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #777777!important;
-    font-weight: 500!important;
-    background: #ffffff!important;
-    font-family: 'Quicksand', sans-serif!important;
+    color: #777777 !important;
+    font-weight: 500 !important;
+    background: #ffffff !important;
+    font-family: 'Quicksand', sans-serif !important;
 }
 
 h1,
-h2, 
-h3, 
+h2,
+h3,
 h4,
-h5, 
+h5,
 h6 {
     color: #4a4c70;
 }
@@ -32,16 +32,16 @@ a:focus {
 
 .btn.btn-custom {
     padding: 12px 20px;
-    text-align: center; 
-   font-size: 16px;
+    text-align: center;
+    font-size: 16px;
     font-weight: 500;
     color: #777777;
     border-radius: 0;
     border: 2px solid #209cf5;
     box-shadow: inset 0 0 0 0 #209cf5;
-    transition: ease-out 0.3s;
     -webkit-transition: ease-out 0.3s;
     -moz-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
 }
 
 .btn.btn-custom:hover {
@@ -58,8 +58,10 @@ a:focus {
     max-width: 1366px;
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
     font-size: inherit;
     margin-left: 0;
 }
@@ -106,13 +108,23 @@ a:focus {
 }
 
 @-webkit-keyframes spin {
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .back-to-top {
@@ -248,14 +260,28 @@ a:focus {
     transition: .5s;
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-logo {
     margin: 0;
     color: #ffffff;
     font-size: 45px;
-    line-height: 0px;
     font-weight: 700;
-    letter-spacing: 5px;
-    text-transform: uppercase;
+    margin-right: 20px;
+    
+}
+.divider {
+    margin-right: 20px;
+    border-right: #209cf5 solid 4px;
+}
+.nav-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.nav-text:hover{
+    color: #209cf5;
 }
 
 .navbar .navbar-brand img {
@@ -269,7 +295,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link.active {
     padding: 10px 15px 8px 15px;
     color: #ffffff;
-    font-size: 18px!important;
+    font-size: 18px !important;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
@@ -284,8 +310,10 @@ a:focus {
     border-radius: 0;
     background: #f8f9fa;
 }
-.ml-auto, .mx-auto {
-    margin-left: auto!important;
+
+.ml-auto,
+.mx-auto {
+    margin-left: auto !important;
 }
 
 @media (min-width: 992px) {
@@ -298,14 +326,17 @@ a:focus {
         border-bottom: 1px solid rgba(255, 255, 255, .3);
         z-index: 9;
     }
+
     .navbar.nav-sticky {
         padding: 10px 60px;
         background: #20212B !important;
         border-bottom: none;
     }
+
     .page .navbar {
         background: #20212B !important;
     }
+
     .navbar a.nav-link {
         padding: 8px 15px;
         font-size: 16px;
@@ -313,16 +344,16 @@ a:focus {
     }
 }
 
-@media (max-width: 991.98px) {   
+@media (max-width: 991.98px) {
     .navbar {
         padding: 15px;
         background: #20212B !important;
     }
-    
+
     .navbar a.nav-link {
         padding: 5px;
     }
-    
+
     .navbar .dropdown-menu {
         box-shadow: none;
     }
@@ -333,7 +364,7 @@ a:focus {
 /********** Hero CSS ***********/
 /*******************************/
 .carousel {
-    position: absolute!important;
+    position: absolute !important;
     width: 100%;
     top: 0;
     min-height: 300px;
@@ -359,7 +390,7 @@ a:focus {
 .carousel .carousel-img {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 600px;
     min-height: 300px;
     text-align: right;
     overflow: hidden;
@@ -487,11 +518,11 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 35px;
     }
-    
+
     .carousel .carousel-text p {
         font-size: 16px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 12px 30px;
         font-size: 15px;
@@ -503,7 +534,7 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 30px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 10px 25px;
         font-size: 15px;
@@ -515,7 +546,7 @@ a:focus {
     .carousel .carousel-text h1 {
         font-size: 25px;
     }
-    
+
     .carousel .carousel-text .btn {
         padding: 8px 20px;
         font-size: 14px;
@@ -590,11 +621,11 @@ a:focus {
     .page-header {
         padding: 60px 0;
     }
-    
+
     .page-header h2 {
         font-size: 45px;
     }
-    
+
     .page-header a {
         font-size: 20px;
     }
@@ -604,11 +635,11 @@ a:focus {
     .page-header {
         padding: 45px 0;
     }
-    
+
     .page-header h2 {
         font-size: 35px;
     }
-    
+
     .page-header a {
         font-size: 18px;
     }
@@ -676,11 +707,8 @@ a:focus {
 
 .about .about-img {
     width: 100%;
-    height: 100vh;
+    height: 500px;
 
-}
-.about .row.align-items-center {
-    margin-top: 64%;
 }
 
 .about .about-tab {
@@ -690,7 +718,7 @@ a:focus {
 .about .about-tab .nav.nav-pills .nav-link {
     padding: 8px;
     font-weight: 600;
-    
+
     background: none;
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .15);
@@ -1398,29 +1426,29 @@ a:focus {
     .event .event-content {
         flex-direction: column;
     }
-    
+
     .event .event-meta {
         flex-direction: row;
     }
-    
+
     .event .event-meta p {
         font-size: 14px;
         padding-right: 7px;
     }
-    
+
     .event .event-meta p:last-child {
         border-bottom: 1px solid rgba(0, 0, 0, .15);
     }
-    
+
     .event .event-meta i {
         width: 18px;
     }
-    
+
     .event .event-text {
         margin: 0;
         padding: 0;
     }
-    
+
     .event .event-text::before,
     .event .event-text::after {
         display: none;
@@ -1969,11 +1997,11 @@ a:focus {
 }
 
 .sidebar .category-widget ul li {
-    margin: 0 0 12px 22px; 
+    margin: 0 0 12px 22px;
 }
 
 .sidebar .category-widget ul li:last-child {
-    margin-bottom: 0; 
+    margin-bottom: 0;
 }
 
 .sidebar .category-widget ul li a {
@@ -2152,9 +2180,39 @@ a:focus {
 }
 
 @media (max-width: 767.98px) {
+
     .footer .copyright p,
     .footer .copyright .col-md-6:last-child p {
         margin: 5px 0;
         text-align: center;
     }
+}
+
+#layoutError {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#layoutError #layoutError_content {
+    min-width: 0;
+    flex-grow: 1;
+}
+
+#layoutError #layoutError_footer {
+    min-width: 0;
+}
+
+.img-error {
+    max-width: 20rem;
+}
+
+/* In your CSS file */
+.equal-height-carousel {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.equal-height-carousel .causes-item {
+    flex: 1;
 }

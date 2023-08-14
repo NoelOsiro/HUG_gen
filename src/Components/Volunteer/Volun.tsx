@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Parallax } from 'react-parallax'; // Import the Parallax component
 
 const Volun = () => {
   return (
-    <div className="volunteer" data-parallax="scroll" data-image-src="assets/img/volunteer.jpg">
-            <div className="container">
-                <div className="row align-items-center">
+    <Parallax
+      bgImage="assets/img/volunteer.jpg"
+      bgImageAlt="Volunteer Background"
+      strength={200} // Adjust the parallax effect strength
+    >
+      <div className="volunteer">
+        <div className="container">
+        <div className="row align-items-center">
                     <div className="col-lg-5">
                         <div className="volunteer-form">
                             <form>
@@ -37,9 +43,10 @@ const Volun = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-  )
-}
+      </div>
+    </Parallax>
+  );
+};
 
-export default Volun
+export default Volun;

@@ -1,10 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { Parallax } from 'react-parallax'; // Import the Parallax component
 
 const Donate = () => {
   return (
-    <div className="donate" data-parallax="scroll" data-image-src="assets/img/donate.jpg">
-            <div className="container">
-                <div className="row align-items-center">
+    <Parallax
+      bgImage="assets/img/donate.jpg"
+      bgImageAlt="Donate Background"
+      strength={-200} // Adjust the parallax effect strength
+    >
+      <div className="donate">
+        <div className="container">
+        <div className="row align-items-center">
                     <div className="col-lg-7">
                         <div className="donate-content">
                             <div className="section-header">
@@ -45,9 +51,10 @@ const Donate = () => {
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
-  )
-}
+      </div>
+    </Parallax>
+  );
+};
 
-export default Donate
+export default Donate;

@@ -12,7 +12,7 @@ const causesData = [
     description: 'Support our mission to provide nutritious meals to those in need, ensuring a healthier community.',
   },
   {
-    image: 'assets/img/causes-2.jpg',
+    image: 'assets/img/causes-5.jpg',
     progress: 0,
     raised: 0,
     goal: 150000,
@@ -20,7 +20,7 @@ const causesData = [
     description: 'Promote sustainable practices for a greener future through conscious choices in daily life.',
   },
   {
-    image: 'assets/img/causes-3.jpg',
+    image: 'assets/img/causes-6.jpg',
     progress: 5,
     raised: 5000,
     goal: 100000,
@@ -44,7 +44,7 @@ const causesData = [
     description: 'Empower individuals with knowledge about sexual and reproductive health for informed decisions.',
   },
   {
-    image: 'assets/img/causes-2.jpg',
+    image: 'assets/img/causes-7.jpg',
     progress: 0,
     raised: 0,
     goal: 100000,
@@ -53,10 +53,6 @@ const causesData = [
   },
   // Add more items...
 ];
-
-
-
-
 
 const Cause = () => {
   useEffect(() => {
@@ -93,7 +89,7 @@ const Cause = () => {
           <p>Popular Causes</p>
           <h2>Let's know about charity causes around the world</h2>
         </div>
-        <div className="owl-carousel causes-carousel">
+        <div className="owl-carousel causes-carousel equal-height-carousel">
           {causesData.map((cause, index) => (
             <div className="causes-item" key={index}>
               <div className="causes-img">

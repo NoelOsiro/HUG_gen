@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
+import { Parallax } from 'react-parallax';
 
 const tabData = [
   {
@@ -20,13 +21,33 @@ const tabData = [
 
 const About = () => {
   const [activeTab, setActiveTab] = useState(tabData[0].id);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const image = new Image();
+    image.src = 'assets/img/about.jpg';
+    image.onload = () => {
+      setImagesLoaded(true);
+    };
+  }, []);
+
+  // Render the component only when images are loaded
+  if (!imagesLoaded) {
+    return null;
+  }
 
   return (
     <div className="about">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-lg-6">
-          <div className="about-img" data-parallax="scroll" data-image-src="assets/img/about.jpg"></div>
+          <Parallax
+              bgImage="assets/img/about.jpg"
+              bgImageAlt="About Image"
+              strength={200} // Adjust the parallax effect strength
+            >
+              <div className="about-img"></div>
+            </Parallax>
           </div>
           <div className="col-lg-6">
             <div className="section-header">
@@ -37,12 +58,12 @@ const About = () => {
               <ul className="nav nav-pills nav-justified">
                 {tabData.map(tab => (
                   <li className="nav-item" key={tab.id}>
-                    <a
+                    <button
                       className={`nav-link ${tab.id === activeTab ? 'active' : ''}`}
                       onClick={() => setActiveTab(tab.id)}
                     >
                       {tab.title}
-                    </a>
+                    </button>
                   </li>
                 ))}
               </ul>

@@ -7,7 +7,7 @@ const teamMembers = [
     role: 'Executive Director',
   },
   {
-    image: 'assets/img/team-2.jpg',
+    image: 'assets/img/team-6.jpg',
     name: 'Mike Dimo',
     role: 'Operations and Finance',
   },
@@ -17,7 +17,7 @@ const teamMembers = [
     role: 'Human Resources',
   },
   {
-    image: 'assets/img/team-3.jpg',
+    image: 'assets/img/team-5.jpg',
     name: 'Daniel Mogaka',
     role: 'Programmes Coordinator',
   },

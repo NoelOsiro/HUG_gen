@@ -16,13 +16,13 @@ const carouselData = [
     videoSrc: 'https://www.youtube.com/embed/DWRcNpR6Kdc',
   },
   {
-    imgSrc: 'assets/img/carousel-3.jpg',
+    imgSrc: 'assets/img/carousel-5.jpg',
     title: 'Inspiring Youth, Transforming Communities',
     text: 'Inspire, empower, and transform. Let us partner as we harness the power of youth to create thriving communities and a brighter future.',
     videoSrc: 'https://www.youtube.com/embed/DWRcNpR6Kdc',
   },
   {
-    imgSrc: 'assets/img/carousel-3.jpg',
+    imgSrc: 'assets/img/carousel-4.jpg',
     title: "Building Bridges, Creating Impact",
     text: "Break down barriers and build bridges of understanding. Join HuG in creating a lasting impact and fostering stronger, more compassionate communities.",
     videoSrc: 'https://www.youtube.com/embed/DWRcNpR6Kdc',

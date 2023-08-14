@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import CounterUp from './CounterUp';
+import { Parallax } from 'react-parallax';
 
 const factsData = [
   { icon: 'flaticon-home', count: '150', text: 'Children' },
@@ -23,7 +24,12 @@ const Facts = () => {
   }, [inView, countersDisplayed]);
 
   return (
-    <div className="facts" data-parallax="scroll" data-image-src="assets/img/facts.jpg">
+    <Parallax
+      bgImage="assets/img/facts.jpg"
+      bgImageAlt="Facts Background"
+      strength={200} // Adjust the parallax effect strength
+    >
+    <div className="facts">
       <div className="container">
         <div className="row">
           {factsData.map((fact, index) => (
@@ -50,6 +56,7 @@ const Facts = () => {
         </div>
       </div>
     </div>
+    </Parallax>
   );
 };
 

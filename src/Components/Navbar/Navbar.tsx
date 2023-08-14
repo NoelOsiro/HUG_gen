@@ -18,7 +18,11 @@ const Navbar = () => {
     return (
         <div className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
-                <a href="/" className="navbar-brand">Helpz</a>
+                < div className='d-flex'>
+                    <div className="navbar-logo">HG</div>
+                    <div className='divider'></div>
+                    <a href='/' className='nav-text'>Humble <br/> Generation</a>
+                </div>
                 <button
                     type="button"
                     className="navbar-toggler"
