@@ -64,7 +64,7 @@ const Event = () => {
         </div>
         <div className="owl-carousel">
           {eventData.map((event, index) => (
-            <div className="col-lg-6" key={index}>
+            <div className="row" key={index}>
               <div className="event-item">
                 <img src={event.image} alt={`pic${index + 1}`} />
                 <div className="event-content">
