@@ -1,4 +1,7 @@
 import React from 'react';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
+import 'owl.carousel/dist/owl.carousel.min.js';
 
 const eventData = [
   {
@@ -19,10 +22,39 @@ const eventData = [
     description: 'Join us in eradicating jiggers from impoverished communities. Together, we can provide medical care, education, and prevention, bringing lasting change',
     link: '/volunteer',
   },
+  {
+    image: 'assets/img/event-2.jpg',
+    date: '10-Sep-23',
+    time: '10:00 - 18:00',
+    location: 'City Park, Nairobi',
+    title: 'Tree Plantation Drive',
+    description: 'Join us in making our planet greener by participating in our tree plantation drive. Your efforts will contribute to a sustainable and healthy environment.',
+    link: '/volunteer',
+  },                                                                  
   // Add more events...
 ];
 
 const Event = () => {
+  useEffect(() => {
+    // Initialize Owl Carousel when the component mounts
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      autoplay: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  }, []);
   return (
     <div className="event">
       <div className="container">
@@ -30,7 +62,7 @@ const Event = () => {
           <p>Upcoming Events</p>
           <h2>Be ready for our upcoming charity events</h2>
         </div>
-        <div className="row">
+        <div className="owl-carousel">
           {eventData.map((event, index) => (
             <div className="col-lg-6" key={index}>
               <div className="event-item">
