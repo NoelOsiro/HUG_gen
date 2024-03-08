@@ -6,7 +6,7 @@ import 'owl.carousel/dist/owl.carousel.min.js';
 const eventData = [
   {
     image: 'assets/img/event-1.jpg',
-    date: '26-August-23',
+    date: '13-April-2023',
     time: '7:00 - 15:00',
     location: 'Fisherman Village, Malindi',
     title: 'Feeding Programe',
