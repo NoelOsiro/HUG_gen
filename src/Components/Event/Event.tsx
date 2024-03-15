@@ -6,7 +6,7 @@ import 'owl.carousel/dist/owl.carousel.min.js';
 const eventData = [
   {
     image: 'assets/img/event-1.jpg',
-    date: '13-April-2023',
+    date: '06-April-2024',
     time: '7:00 - 15:00',
     location: 'Fisherman Village, Malindi',
     title: 'Feeding Programe',
@@ -15,7 +15,7 @@ const eventData = [
   },
   {
     image: 'assets/img/event-2.jpg',
-    date: '03-Sep-23',
+    date: '12-April-24',
     time: '8:00 - 15:00',
     location: 'Fisherman Village, Malindi',
     title: 'Jigger Eradication',
@@ -24,9 +24,9 @@ const eventData = [
   },
   {
     image: 'assets/img/event-2.jpg',
-    date: '10-Sep-23',
+    date: '11-Apr-23',
     time: '10:00 - 18:00',
-    location: 'City Park, Nairobi',
+    location: 'Fisherman Village, Malindi',
     title: 'Tree Plantation Drive',
     description: 'Join us in making our planet greener by participating in our tree plantation drive. Your efforts will contribute to a sustainable and healthy environment.',
     link: '/volunteer',
