@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "dsznajder.es7-react-js-snippets",
+        "dbaeumer.vscode-eslint",
+        "github.copilot-chat",
+        "visualstudioexptteam.vscodeintellicode",
+        "visualstudioexptteam.intellicode-api-usage-examples",
+        "fallenmax.mithril-emmet",
+        "esbenp.prettier-vscode",
+        "github.copilot",
+        "eamodio.gitlens"
+    ]
+}
