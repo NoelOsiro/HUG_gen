@@ -15,9 +15,9 @@ export default function Home() {
       <Service/>
       <Facts/>
       <Cause/>
-      {/* <Donate/>
+      <Donate/>
       <Event/>
-      <Contact/> */}
+      {/* <Contact/> */}
     </main>
   );
 }

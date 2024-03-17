@@ -70,7 +70,7 @@ const causesData = [
 
 const Cause = () => {
   return (
-    <section className="relative py-32 lg:py-36 bg-white w-full">
+    <section className="relative py-16 lg:py-24 bg-white w-full">
       <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <SectionHeader
           title="Popular Causes"
@@ -142,52 +142,52 @@ const Cause = () => {
             >
               {causesData.slice(4, 7).map((cause, index) => (
                 <div key={index} className="p-4">
-                <div className="rounded-lg">
-                  <Image
-                    src={cause.image}
-                    alt={`pic${index + 1}`}
-                    className="rounded-lg"
-                    width={800}
-                    height={800}
-                  />
-                </div>
-                <div className="p-2">
-                  <p className="mb-4">
-                    <strong>Progress:</strong>
-                  </p>
-                  <Progress progress={cause.progress} color="blue" />
-                  <div className=" flex items-center justify-between">
-                    <p>
-                      <strong>Raised:</strong> Ksh {cause.raised}
+                  <div className="rounded-lg">
+                    <Image
+                      src={cause.image}
+                      alt={`pic${index + 1}`}
+                      className="rounded-lg"
+                      width={800}
+                      height={800}
+                    />
+                  </div>
+                  <div className="p-2">
+                    <p className="mb-4">
+                      <strong>Progress:</strong>
                     </p>
-                    <p>
-                      <strong>Goal:</strong> Ksh {cause.goal}
-                    </p>
+                    <Progress progress={cause.progress} color="blue" />
+                    <div className=" flex items-center justify-between">
+                      <p>
+                        <strong>Raised:</strong> Ksh {cause.raised}
+                      </p>
+                      <p>
+                        <strong>Goal:</strong> Ksh {cause.goal}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="p-2">
+                    <h3 className="font-bold">{cause.title}</h3>
+                    <p>{cause.description}</p>
+                  </div>
+                  <div className="flex justify-center gap-4 items-center mt-4">
+                    <a
+                      className="flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]"
+                      href="/donate"
+                    >
+                      <span className="relative z-10 text-white font-bold">
+                        Donate
+                      </span>
+                    </a>
+                    <a
+                      className="flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]"
+                      href="/donate"
+                    >
+                      <span className="relative z-10 text-white font-bold">
+                        Volunteer
+                      </span>
+                    </a>
                   </div>
                 </div>
-                <div className="p-2">
-                  <h3 className="font-bold">{cause.title}</h3>
-                  <p>{cause.description}</p>
-                </div>
-                <div className="flex justify-center gap-4 items-center mt-4">
-                  <a
-                    className="flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]"
-                    href="/donate"
-                  >
-                    <span className="relative z-10 text-white font-bold">
-                      Donate
-                    </span>
-                  </a>
-                  <a
-                    className="flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]"
-                    href="/donate"
-                  >
-                    <span className="relative z-10 text-white font-bold">
-                      Volunteer
-                    </span>
-                  </a>
-                </div>
-              </div>
               ))}
             </Carousel>
           </div>
