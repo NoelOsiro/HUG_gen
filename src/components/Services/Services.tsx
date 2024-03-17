@@ -7,6 +7,7 @@ import {
   GiHomeGarage,
   GiHeartBattery,
 } from "react-icons/gi";
+import SectionHeader from "@/components/Section/SectionHeader";
 
 const servicesData = [
   {
@@ -45,14 +46,10 @@ const Service = () => {
   return (
     <div className="service py-20">
       <div className="container mx-auto">
-        <div className="relative w-full max-w-700px mx-auto mb-20 text-center">
-          <p className="text-2xl lg:text-4xl font-semibold text-blue-600">
-            What We Do?
-          </p>
-          <h2 className="text-3xl lg:text-4xl font-semibold text-gray-800">
-            We believe that we can save more lives with you
-          </h2>
-        </div>
+        <SectionHeader
+          title={"What We Do?"}
+          text={"We believe that we can save more lives with you"}
+        />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {servicesData.map((service, index) => (
             <div
