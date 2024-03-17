@@ -140,7 +140,7 @@ const Cause = () => {
               leftControl=" "
               rightControl=" "
             >
-              {causesData.slice(4, 7).map((cause, index) => (
+              {causesData.slice(3).map((cause, index) => (
                 <div key={index} className="p-4">
                   <div className="rounded-lg">
                     <Image
