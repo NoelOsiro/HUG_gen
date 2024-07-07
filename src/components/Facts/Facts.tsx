@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import CounterUp from "./CounterUp";
@@ -7,10 +7,10 @@ import FactsImage from "@/assets/img/facts.jpg";
 import { FiHome, FiHeart, FiStar, FiDollarSign } from "react-icons/fi";
 
 const factsData = [
-  { icon: FiHome , count: "150", text: "Children" },
-  { icon: FiHeart , count: "22", text: "Volunteers" },
-  { icon: FiStar , count: "1000", text: "Our Goal" },
-  { icon: FiDollarSign , count: "5000", text: "Raised" },
+  { icon: FiHome, count: "150", text: "Children" },
+  { icon: FiHeart, count: "22", text: "Volunteers" },
+  { icon: FiStar, count: "1000", text: "Our Goal" },
+  { icon: FiDollarSign, count: "5000", text: "Raised" },
 ];
 
 const Facts = () => {
@@ -39,27 +39,23 @@ const Facts = () => {
             {factsData.map((fact, index) => (
               <div
                 key={index}
-                className="facts-item flex items-center justify-center p-6 shadow-lg"
+                className="facts-item flex items-center justify-center p-6 shadow-lg rounded-lg bg-white bg-opacity-70 backdrop-blur-md"
               >
-                <fact.icon className='text-4xl text-blue-600 mr-4'/>
+                <fact.icon className="text-4xl text-blue-600 mr-4" />
                 <div className="facts-text">
-                  <h3
-                    className="text-2xl font-bold mb-2"
-                    data-toggle="counter-up"
-                    ref={inViewRef}
-                  >
+                  <h3 className="text-2xl font-bold mb-2">
                     {countersDisplayed ? (
                       <CounterUp
                         start={0}
                         end={parseInt(fact.count)}
                         delay={10}
                         duration={2000}
-                      
-                   /> ) : (
+                      />
+                    ) : (
                       fact.count
                     )}
                   </h3>
-                  <p className="text-white text-xl">{fact.text}</p>
+                  <p className="text-gray-800 text-lg">{fact.text}</p>
                 </div>
               </div>
             ))}
