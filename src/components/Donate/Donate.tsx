@@ -7,12 +7,12 @@ import DonateImg from "@/assets/img/donate.jpg";
 const Donate = () => {
   return (
     <Parallax
-      bgImage={'https://source.unsplash.com/random/?coins'}
+      bgImage={'/img/coins.jpg'}
       bgImageAlt="Donate Background"
       strength={-200}
-      className="w-full h-96" // Adjust the parallax effect strength
+      className="w-full md:h-[50rem] h-[60rem] h-96" // Adjust the parallax effect strength
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto sm:mt-[20%]">
         <div className="flex flex-col lg:flex-row items-center">
           <div className="lg:w-7/12">
             <div className="donate-content">
