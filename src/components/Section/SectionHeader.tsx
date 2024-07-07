@@ -7,7 +7,7 @@ interface SectionHeaderProps {
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({ title, text }) => {
     return (
-        <div className="relative w-full max-w-700px mx-auto mb-20 text-center">
+        <div className="relative w-full max-w-700px mx-auto mb-16 text-center">
           <p className="text-2xl lg:text-4xl font-semibold text-blue-600">
             {title}
           </p>

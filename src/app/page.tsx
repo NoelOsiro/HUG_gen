@@ -9,15 +9,18 @@ import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between">
-      <Hero/>
-      <About/>
-      <Service/>
-      <Facts/>
-      <Cause/>
-      <Donate/>
-      <Event/>
-      {/* <Contact/> */}
-    </main>
+    <div>    
+      <main className="flex min-h-screen flex-col items-center justify-between">
+        <Hero />
+        <About />
+        <Service />
+        <Facts />
+        <Cause />
+        <Donate />
+        <Event />
+        {/* <Contact /> */}
+      </main>
+    </div>
   );
 }
+

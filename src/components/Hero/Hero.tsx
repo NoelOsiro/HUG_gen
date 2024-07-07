@@ -75,11 +75,6 @@ const Hero: React.FC = () => {
           <p className="mt-8 text-xl text-gray-700">{items[currentItem].text}</p>
           <div className="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
             <div className="flex sm:flex-row flex-col gap-5 w-full">
-            <a className = "flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]" href="/donate">
-            <span className="relative z-10 text-white font-bold">
-                        Donate Now
-                    </span>
-                  </a>
                   <a className = "flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]" href="/donate">
             <span className="relative z-10 text-white font-bold">
                         Watch video
@@ -93,8 +88,8 @@ const Hero: React.FC = () => {
             src={items[currentItem].imageUrl}
             alt="Hero image"
             width={720}
-            height={720}
-            className="lg:absolute lg:w-full lg:h-full rounded-3xl object-cover lg:max-h-none max-h-96"
+            height={820}
+            className="lg:absolute lg:w-full rounded-md object-cover lg:max-h-none "
           />
         </div>
       </div>
