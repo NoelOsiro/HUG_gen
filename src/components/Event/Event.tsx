@@ -42,7 +42,7 @@ const eventData = [
 
 const Event = () => {
   return (
-    <section className="relative py-18 lg:py-16 bg-white w-full">
+    <section className="relative py-18 lg:py-24 bg-white w-full">
       <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <SectionHeader
           title={"Upcoming Events"}
