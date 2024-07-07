@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import { Kumbh_Sans } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 const kumbh = Kumbh_Sans({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={kumbh.className}>
         <Header/>
         {children}</body>
+        <Footer/>
     </html>
   );
 }
