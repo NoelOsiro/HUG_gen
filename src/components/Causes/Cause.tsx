@@ -70,8 +70,8 @@ const causesData = [
 
 const Cause = () => {
   return (
-    <section className="relative py-18 lg:py-16 bg-white w-full">
-      <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
+    <section className="relative py-18 lg:py-16 bg-white  w-full">
+      <div className="container mx-auto px-5  sm:px-10 md:px-12 lg:px-5">
         <SectionHeader
           title="Popular Causes"
           text="Let us know about charity causes around the world"
@@ -85,7 +85,7 @@ const Cause = () => {
               rightControl=" "
             >
               {causesData.slice(0, 3).map((cause, index) => (
-                <div key={index} className="p-4 mb-4 h-full">
+                <div key={index} className="p-4 mb-4 ">
                   <div className="rounded-lg overflow-hidden hidden sm:block">
                     <Image
                       src={cause.image}
@@ -135,7 +135,7 @@ const Cause = () => {
               rightControl=" "
             >
               {causesData.slice(3).map((cause, index) => (
-                <div key={index} className="p-4 h-full">
+                <div key={index} className="p-4 ">
                   <div className="rounded-lg overflow-hidden hidden sm:block">
                     <Image
                       src={cause.image}
