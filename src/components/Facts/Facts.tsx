@@ -44,7 +44,7 @@ const Facts = () => {
                 <fact.icon className='text-4xl text-blue-600 mr-4'/>
                 <div className="facts-text">
                   <h3
-                    className="text-2xl font-bold mb-2"
+                    className="text-3xl font-bold text-white mb-2"
                     data-toggle="counter-up"
                     ref={inViewRef}
                   >

@@ -21,8 +21,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={kumbh.className}>
         <Header/>
-        {children}</body>
+        {children}
         <Footer/>
+        </body>
+        
     </html>
   );
 }

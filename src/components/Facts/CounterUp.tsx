@@ -28,7 +28,7 @@ const CounterUp: React.FC<IProps> = (props:IProps) => {
     }
   }, [count, props.end, props.delay, props.duration,step]);
 
-  return <span className='text-white text-4xl'>{count}</span>;
+  return <span>{count}</span>;
 };
 
 export default CounterUp;
