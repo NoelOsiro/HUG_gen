@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionHeader from '../Section/SectionHeader';
 import Image from 'next/image';
+import { BsTwitterX } from 'react-icons/bs';
+import { FaFacebookF, FaLinkedin, FaInstagramSquare } from 'react-icons/fa';
 
 const teamMembers = [
   {
@@ -51,10 +53,10 @@ const Team = () => {
                 <h2 className="text-xl font-semibold">{member.name}</h2>
                 <p className="text-gray-600 mb-4">{member.role}</p>
                 <div className="flex justify-center">
-                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><i className="fab fa-twitter"></i></a>
-                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><i className="fab fa-facebook-f"></i></a>
-                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><i className="fab fa-linkedin-in"></i></a>
-                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><i className="fab fa-instagram"></i></a>
+                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><BsTwitterX /></a>
+                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><FaFacebookF /></a>
+                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><FaLinkedin /></a>
+                  <a href="/twitt" title='social' className="text-gray-700 hover:text-gray-900 mx-2"><FaInstagramSquare /></a>
                 </div>
               </div>
             </div>
