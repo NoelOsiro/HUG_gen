@@ -42,47 +42,50 @@ const eventData = [
 
 const Event = () => {
   return (
-    <section className="relative py-16 lg:py-24 bg-white w-full">
+    <section className="relative py-18 lg:py-16 bg-white w-full">
       <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
         <SectionHeader
           title={"Upcoming Events"}
           text={"Be ready for our upcoming charity events"}
         />
         <div className="relative flex items-center overflow-x-scroll lg:overflow-x-hidden">
-          <div className="w-full grid grid-cols-2 gap-4 h-screen">
+          <div className="w-full grid lg:grid-cols-2 grid-cols-1 sm:gap-4 gap-24 h-screen">
             <Carousel
               slideInterval={5000}
               indicators={false}
               leftControl=" "
               rightControl=" "
             >
-              {eventData.slice(0, 2).map((event, index) => (
-                <div className="p-4" key={index}>
-                  <div className="rounded-lg">
+              {eventData.slice(0,2).map((event, index) => (
+                <div className="p-4 mb-4" key={index}>
+                  <div className="rounded-lg overflow-hidden">
                     <Image
                       src={event.image}
-                      alt={`pic${index + 1}`}
-                      className="rounded-lg"
+                      alt={`Event ${index + 1}`}
+                      className="object-cover w-full h-96 relative"
                     />
-                    <div className="p-2">
-                      <div className="mb-4">
-                        <p>
-                          <FcCalendar />
-                          {event.date}
+                    <div className="p-4">
+                      <div className="flex items-center justify-center mb-4">
+                        <FcCalendar className="text-blue-600 mr-2" size={32} />
+                        <p className="text-gray-600 text-lg font-medium">
+                          {event.date} <br/> {event.time}
                         </p>
-                        <p>
-                          <FcClock />
-                          {event.time}
-                        </p>
-                        <p>
-                          <FcEditImage />
+                      </div>
+                      <div className="flex items-center justify-center mb-4">
+                        <FcEditImage className="text-blue-600 mr-2" size={32}/>
+                        <p className="text-gray-600 text-sm font-medium">
                           {event.location}
                         </p>
                       </div>
                       <div className="event-text">
-                        <h3>{event.title}</h3>
-                        <p>{event.description}</p>
-                        <a className="btn btn-custom" href={event.link}>
+                        <h3 className="text-xl lg:text-2xl font-semibold mb-2">
+                          {event.title}
+                        </h3>
+                        <p className="text-gray-700">{event.description}</p>
+                        <a
+                          href={event.link}
+                          className="btn btn-custom inline-block mt-4"
+                        >
                           Join Now
                         </a>
                       </div>
@@ -98,32 +101,35 @@ const Event = () => {
               rightControl=" "
             >
               {eventData.slice(2).map((event, index) => (
-                <div className="row" key={index}>
-                  <div className="event-item">
+                <div className="p-4 mb-4" key={index}>
+                  <div className="rounded-lg overflow-hidden">
                     <Image
                       src={event.image}
-                      alt={`pic${index + 1}`}
-                      className="rounded-lg"
+                      alt={`Event ${index + 1}`}
+                      className="object-cover w-full h-96 relative"
                     />
-                    <div className="event-content">
-                      <div className="event-meta">
-                        <p>
-                          <FcCalendar />
-                          {event.date}
+                    <div className="p-4">
+                      <div className="flex items-center justify-center mb-4">
+                        <FcCalendar className="text-blue-600 mr-2" size={32} />
+                        <p className="text-gray-600 text-lg font-medium">
+                          {event.date} <br/> {event.time}
                         </p>
-                        <p>
-                          <FcClock />
-                          {event.time}
-                        </p>
-                        <p>
-                          <FcEditImage />
+                      </div>
+                      <div className="flex items-center justify-center mb-4">
+                        <FcEditImage className="text-blue-600 mr-2" size={32}/>
+                        <p className="text-gray-600 text-sm font-medium">
                           {event.location}
                         </p>
                       </div>
                       <div className="event-text">
-                        <h3>{event.title}</h3>
-                        <p>{event.description}</p>
-                        <a className="btn btn-custom" href={event.link}>
+                        <h3 className="text-xl lg:text-2xl font-semibold mb-2">
+                          {event.title}
+                        </h3>
+                        <p className="text-gray-700">{event.description}</p>
+                        <a
+                          href={event.link}
+                          className="btn btn-custom inline-block mt-4"
+                        >
                           Join Now
                         </a>
                       </div>
