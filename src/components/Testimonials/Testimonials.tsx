@@ -1,5 +1,4 @@
 import React from 'react';
-import { Carousel } from "flowbite-react";
 import SectionHeader from '../Section/SectionHeader';
 import Image from 'next/image';
 
@@ -38,88 +37,26 @@ const Testimonials = () => {
           title="Testimonials"
           text="What people are talking about our charity activities"
         />
-        <div className="overflow-x-hidden ">
-        <div className="w-full grid lg:grid-cols-2 grid-cols-1 sm:gap-4 gap-8 h-[40rem]">
-            <Carousel
-              slideInterval={5000}
-              indicators={false}
-            >
-              {testimonialsData.slice(0,2).map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 w-full sm:w-96 p-4 mb-4">
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={600}
-                    height={500}
-                    layout="responsive"
-                    className='object-cover w-full h-80'
-                  />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
-                    <p className="text-gray-600">{testimonial.profession}</p>
-                  </div>
-                </div>
-                <div className="testimonial-text">
-                  <p>{testimonial.text}</p>
+        <div className="grid grid-cols-1 md:grid-cols-4  gap-8">
+          {testimonialsData.map((testimonial, index) => (
+            <div key={index} className="p-4 mb-4 bg-white shadow-lg rounded-lg">
+              <div className="rounded-lg overflow-hidden">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.name}
+                  width={500}
+                  height={500}
+                  layout="responsive"
+                  className="object-cover w-full h-60"
+                />
+                <div className="p-4 text-center">
+                  <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
+                  <p className="text-gray-600 mb-4">{testimonial.profession}</p>
+                  <p className="text-gray-700">{testimonial.text}</p>
                 </div>
               </div>
-            ))}
-            </Carousel>
-            <Carousel
-              slideInterval={5000}
-              indicators={false}
-            >
-              {testimonialsData.slice(2).map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 w-full sm:w-96 p-4 mb-4">
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    layout="responsive"
-                    className='object-cover w-full h-80'
-                  />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
-                    <p className="text-gray-600">{testimonial.profession}</p>
-                  </div>
-                </div>
-                <div className="testimonial-text">
-                  <p>{testimonial.text}</p>
-                </div>
-              </div>
-            ))}
-            </Carousel>
-          </div>
-          <Carousel
-            slideInterval={5000}
-            indicators={false}
-            className='w-full'
-          >
-            {testimonialsData.map((testimonial, index) => (
-              <div key={index} className="flex-shrink-0 w-full sm:w-96 p-4 mb-4">
-                <div className="rounded-lg overflow-hidden">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    layout="responsive"
-                    className='object-cover w-full h-96'
-                  />
-                  <div className="p-4">
-                    <h3 className="text-xl font-semibold mb-2">{testimonial.name}</h3>
-                    <p className="text-gray-600">{testimonial.profession}</p>
-                  </div>
-                </div>
-                <div className="testimonial-text">
-                  <p>{testimonial.text}</p>
-                </div>
-              </div>
-            ))}
-          </Carousel>
+            </div>
+          ))}
         </div>
       </div>
     </section>
