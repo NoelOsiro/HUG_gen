@@ -3,11 +3,11 @@ import SharePost from "@/components/Blog/SharePost";
 import { sanityFetch } from "@/sanity/lib/client";
 import { Metadata } from "next";
 import Image from "next/image";
-import { POST_QUERYResult } from "../../../../sanity.types";
+import { POST_QUERYResult } from "../../../../../sanity.types";
 import { POST_QUERY } from "@/sanity/lib/queries";
 import { urlFor } from "@/sanity/lib/image";
 import { PortableText, PortableTextComponents } from "next-sanity";
-import { SampleImageComponent } from "../../../components/Blog/SampleImageComponent";
+import { SampleImageComponent } from "../../../../components/Blog/SampleImageComponent";
 
 // Metadata for the page
 export const metadata: Metadata = {

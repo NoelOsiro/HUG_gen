@@ -1,6 +1,6 @@
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
-import { ImageProps } from "../../app/blog/[slug]/page";
+import { ImageProps } from "../../app/(site)/blog/[slug]/page";
 
 // Sample Image Component
 export const SampleImageComponent = ({ value }: ImageProps) => {
