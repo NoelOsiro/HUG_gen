@@ -5,28 +5,12 @@ import { FcCalendar, FcClock, FcEditImage } from "react-icons/fc";
 import Image from "next/image";
 import Event1 from "@/assets/img/event-1.jpg";
 import Event2 from "@/assets/img/event-2.jpg";
+import { EVENTS_QUERY } from "@/sanity/lib/queries";
+import { sanityFetch } from "@/sanity/lib/client";
+import { EVENTS_QUERYResult } from "../../../sanity.types";
+import { urlFor } from "@/sanity/lib/image";
 
 const eventData = [
-  {
-    image: Event1,
-    date: "06-April-2024",
-    time: "7:00 - 15:00",
-    location: "Fisherman Village, Malindi",
-    title: "Feeding Programe",
-    description:
-      "Join hands with us in our Feeding Program to provide nutritious meals for the needy. Your support ensures a healthier community. Be part of the change today!",
-    link: "/volunteer",
-  },
-  {
-    image: Event2,
-    date: "12-April-24",
-    time: "8:00 - 15:00",
-    location: "Fisherman Village, Malindi",
-    title: "Jigger Eradication",
-    description:
-      "Join us in eradicating jiggers from impoverished communities. Together, we can provide medical care, education, and prevention, bringing lasting change",
-    link: "/volunteer",
-  },
   {
     image: Event2,
     date: "11-Apr-23",
@@ -40,7 +24,10 @@ const eventData = [
   // Add more events...
 ];
 
-const Event = () => {
+const Event = async () => {
+  const events = await sanityFetch<EVENTS_QUERYResult>({
+    query: EVENTS_QUERY,
+  });
   return (
     <section className="relative py-18 lg:py-24 bg-white w-full">
       <div className="container mx-auto px-5 sm:px-10 md:px-12 lg:px-5">
@@ -56,14 +43,18 @@ const Event = () => {
               leftControl=" "
               rightControl=" "
             >
-              {eventData.slice(0,2).map((event, index) => (
+              {events.slice(0,2).map((event, index) => (
                 <div className="p-4 mb-4" key={index}>
                   <div className="rounded-lg overflow-hidden">
+                  {event.image && event.image.asset && (
                     <Image
-                      src={event.image}
+                      src={urlFor(event.image).url()}
                       alt={`Event ${index + 1}`}
+                      width={500}
+                      height={500}
                       className="object-cover w-full h-96 relative"
-                    />
+                    />)
+                    }
                     <div className="p-4">
                       <div className="flex items-center justify-center mb-4">
                         <FcCalendar className="text-blue-600 mr-2" size={32} />
@@ -82,12 +73,14 @@ const Event = () => {
                           {event.title}
                         </h3>
                         <p className="text-gray-700">{event.description}</p>
-                        <a
+                        {event.link && (
+                          <a
                           href={event.link}
                           className="btn btn-custom inline-block mt-4"
                         >
                           Join Now
-                        </a>
+                        </a>)}
+                        
                       </div>
                     </div>
                   </div>
@@ -100,14 +93,16 @@ const Event = () => {
               leftControl=" "
               rightControl=" "
             >
-              {eventData.slice(2).map((event, index) => (
+              {events.slice(2).map((event, index) => (
                 <div className="p-4 mb-4" key={index}>
                   <div className="rounded-lg overflow-hidden">
+                  {event.image && event.image.asset && (
                     <Image
-                      src={event.image}
+                      src={urlFor(event.image).url()}
                       alt={`Event ${index + 1}`}
                       className="object-cover w-full h-96 relative"
-                    />
+                    />)
+                    }
                     <div className="p-4">
                       <div className="flex items-center justify-center mb-4">
                         <FcCalendar className="text-blue-600 mr-2" size={32} />
@@ -126,12 +121,13 @@ const Event = () => {
                           {event.title}
                         </h3>
                         <p className="text-gray-700">{event.description}</p>
-                        <a
+                        {event.link && (
+                          <a
                           href={event.link}
                           className="btn btn-custom inline-block mt-4"
                         >
                           Join Now
-                        </a>
+                        </a>)}
                       </div>
                     </div>
                   </div>
