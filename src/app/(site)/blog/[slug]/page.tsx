@@ -1,5 +1,6 @@
 import RelatedPost from "@/components/Blog/RelatedPost";
 import SharePost from "@/components/Blog/SharePost";
+import { Section, SectionHeader } from "@/components/UI";
 import { sanityFetch } from "@/sanity/lib/client";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -11,8 +12,8 @@ import { SampleImageComponent } from "../../../../components/Blog/SampleImageCom
 
 // Metadata for the page
 export const metadata: Metadata = {
-  title: "Blog Details Page - Solid SaaS Boilerplate",
-  description: "This is Blog details page for Solid Pro",
+  title: "Blog Post - Humble Generation",
+  description: "Read our latest community stories and updates",
   // other metadata
 };
 
@@ -38,9 +39,11 @@ const components: PortableTextComponents = {
   },
   block: {
     h3: ({ children }: BlockProps) => (
-      <h3 className="pt-8 text-xl font-semibold">{children}</h3>
+      <h3 className="pt-8 text-xl font-semibold text-gray-900 dark:text-white">{children}</h3>
     ),
-    normal: ({ children }: BlockProps) => <p className="mb-5">{children}</p>,
+    normal: ({ children }: BlockProps) => (
+      <p className="mb-5 text-gray-700 dark:text-waterloo leading-relaxed">{children}</p>
+    ),
   },
 };
 
@@ -52,127 +55,145 @@ const SingleBlogPage = async ({ params }: { params: { slug: string } }) => {
   });
 
   return (
-    <>
-      <section className="relative py-32 lg:py-36 bg-white w-full">
-        <div className="mx-auto max-w-c-1390 px-4 md:px-8">
-          <div className="flex flex-col-reverse gap-4 lg:flex-row xl:gap-4">
-            <div className="md:w-1/2 lg:w-[22%]">
-              {/* Search Form */}
-              <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-3.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
-                <form action="https://formbold.com/s/unique_form_id" method="POST">
-                  <div className="relative">
-                    <input
-                      type="text"
-                      placeholder="Search Here..."
-                      className="w-full rounded-lg border border-stroke px-6 py-4 shadow-solid-12 focus:border-primary focus:outline-none dark:border-strokedark dark:bg-black dark:shadow-none dark:focus:border-primary"
-                    />
-                    <button
-                      className="absolute right-0 top-0 p-5"
-                      aria-label="search-icon"
-                    >
-                      <svg
-                        className="fill-black transition-all duration-300 hover:fill-primary dark:fill-white dark:hover:fill-primary"
-                        width="21"
-                        height="21"
-                        viewBox="0 0 21 21"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path d="M16.031 14.617L20.314 18.899L18.899 20.314L14.617 16.031C13.0237 17.3082 11.042 18.0029 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0C13.968 0 18 4.032 18 9C18.0029 11.042 17.3082 13.0237 16.031 14.617ZM14.025 13.875C15.2941 12.5699 16.0029 10.8204 16 9C16 5.132 12.867 2 9 2C5.132 2 2 5.132 2 9C2 12.867 5.132 16 9 16C10.8204 16.0029 12.5699 15.2941 13.875 14.025L14.025 13.875Z" />
-                      </svg>
-                    </button>
-                  </div>
-                </form>
-              </div>
-
-              {/* Categories */}
-              <div className="animate_top mb-10 rounded-md border border-stroke bg-white p-9 shadow-solid-13 dark:border-strokedark dark:bg-blacksection">
-                <h4 className="mb-7.5 text-2xl font-semibold text-black dark:text-white">
-                  Categories
-                </h4>
-                <ul>
-                  <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Blog</a>
-                  </li>
-                  <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Events</a>
-                  </li>
-                  <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Grids</a>
-                  </li>
-                  <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">News</a>
-                  </li>
-                  <li className="mb-3 transition-all duration-300 last:mb-0 hover:text-primary">
-                    <a href="#">Rounded</a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Related Posts */}
-              <RelatedPost />
+    <Section className="bg-white dark:bg-blacksection transition-colors duration-300 relative overflow-hidden">
+      {/* Background Decoration */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-meta/5 rounded-full blur-3xl"></div>
+      
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <div className="flex flex-col-reverse gap-8 lg:flex-row xl:gap-12">
+          {/* Sidebar */}
+          <div className="lg:w-[25%]">
+            {/* Search Form */}
+            <div className="mb-8 bg-gray-50 dark:bg-blackho border border-gray-200 dark:border-strokedark rounded-xl p-6 hover:shadow-solid-5 transition-all duration-300">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Search Articles</h4>
+              <form className="relative">
+                <input
+                  type="text"
+                  placeholder="Search for stories..."
+                  className="w-full py-3 px-4 pr-12 bg-white dark:bg-blacksection border border-gray-200 dark:border-strokedark rounded-lg text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-waterloo focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors duration-300"
+                />
+                <button
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition-colors duration-300"
+                  aria-label="search"
+                  type="submit"
+                >
+                  <i className="fas fa-search"></i>
+                </button>
+              </form>
             </div>
 
-            <div className="lg:w-[78%]">
-              {/* Blog Details */}
-              {post && (
-                <div className="animate_top rounded-md border border-stroke bg-white p-7.5 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-4">
-                  <div className="mb-10 w-full overflow-hidden">
-                    {post.mainImage && post.title ? (
-                      <div className="relative">
-                        <Image
-                          src={urlFor(post.mainImage).url() || '/fallback-image.png'} // Fallback image
-                          alt={post.mainImage.alt || post.title}
-                          width={900}
-                          height={500}
-                          className="rounded-md object-cover object-center"
-                        />
+            {/* Categories */}
+            <div className="mb-8 bg-gray-50 dark:bg-blackho border border-gray-200 dark:border-strokedark rounded-xl p-6 hover:shadow-solid-5 transition-all duration-300">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                <i className="fas fa-folder text-primary"></i>
+                Categories
+              </h4>
+              <ul className="space-y-3">
+                {[
+                  { name: "Community Stories", count: 12 },
+                  { name: "Program Updates", count: 8 },
+                  { name: "Success Stories", count: 15 },
+                  { name: "Events", count: 6 },
+                  { name: "News", count: 9 }
+                ].map((category, index) => (
+                  <li key={category.name}>
+                    <a 
+                      href="#" 
+                      className="flex items-center justify-between text-gray-700 dark:text-waterloo hover:text-primary transition-colors duration-300 group"
+                    >
+                      <span className="group-hover:translate-x-1 transition-transform duration-300">
+                        {category.name}
+                      </span>
+                      <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">
+                        {category.count}
+                      </span>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Related Posts */}
+            <RelatedPost />
+          </div>
+
+          {/* Main Content */}
+          <div className="lg:w-[75%]">
+            {post && (
+              <article className="bg-white dark:bg-blackho border border-gray-200 dark:border-strokedark rounded-2xl overflow-hidden shadow-solid-5">
+                {/* Featured Image */}
+                {post.mainImage && post.title && (
+                  <div className="relative h-96 lg:h-[500px] overflow-hidden">
+                    <Image
+                      src={urlFor(post.mainImage).url() || '/fallback-image.png'}
+                      alt={post.mainImage.alt || post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, 75vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
+                    
+                    {/* Article Meta Overlay */}
+                    <div className="absolute bottom-6 left-6 right-6 text-white">
+                      <div className="flex items-center gap-4 text-sm mb-4">
+                        {post.categories && post.categories.length > 0 && (
+                          <span className="px-3 py-1 bg-primary rounded-full font-semibold">
+                            {post.categories[0]?.title}
+                          </span>
+                        )}
+                        {post.publishedAt && (
+                          <span className="flex items-center gap-2">
+                            <i className="fas fa-calendar-alt"></i>
+                            {new Date(post.publishedAt).toLocaleDateString()}
+                          </span>
+                        )}
                       </div>
-                    ) : (
-                      <div className="relative bg-gray-200 h-500 rounded-md">
-                        <p className="text-center text-gray-500">No Image Available</p>
-                      </div>
-                    )}
+                    </div>
+                  </div>
+                )}
+
+                {/* Article Content */}
+                <div className="p-8 lg:p-12">
+                  {/* Title */}
+                  <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+                    {post.title}
+                  </h1>
+
+                  {/* Author Info */}
+                  <div className="flex items-center gap-4 pb-8 mb-8 border-b border-gray-200 dark:border-strokedark">
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-meta rounded-full flex items-center justify-center text-white font-semibold">
+                      {post.author?.name?.charAt(0) || 'A'}
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white">
+                        {post.author?.name || 'Humble Generation'}
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-waterloo flex items-center gap-2">
+                        <i className="fas fa-user-edit text-primary"></i>
+                        Author & Community Leader
+                      </p>
+                    </div>
                   </div>
 
-                  <h2 className="mb-5 mt-11 text-3xl font-semibold text-black dark:text-white 2xl:text-sectiontitle2">
-                    {post.title}
-                  </h2>
-
-                  <ul className="mb-9 flex flex-wrap gap-5 2xl:gap-7.5 px-4">
-                    <li>
-                      <span className="text-black dark:text-white">Author: {post.author?.name}</span>
-                    </li>
-                    {post.publishedAt ? (
-                      <li>
-                        <span className="text-black dark:text-white">
-                          Published On: {new Date(post.publishedAt).toDateString()}
-                        </span>
-                      </li>
-                    ) : null}
-                    {post.categories && post.categories.length > 0 && (
-                      <li>
-                        <span className="text-black dark:text-white">
-                          Category: {post.categories[0]?.title}
-                        </span>
-                      </li>
-                    )}
-                  </ul>
-
+                  {/* Article Body */}
                   {post.body && (
-                    <div className="blog-details px-4">
+                    <div className="prose prose-lg max-w-none text-gray-700 dark:text-waterloo">
                       <PortableText value={post.body} components={components} />
                     </div>
                   )}
 
-                  <SharePost />
+                  {/* Share Component */}
+                  <div className="mt-12 pt-8 border-t border-gray-200 dark:border-strokedark">
+                    <SharePost />
+                  </div>
                 </div>
-              )}
-            </div>
+              </article>
+            )}
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </Section>
   );
 };
 
