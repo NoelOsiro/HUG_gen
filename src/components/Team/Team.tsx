@@ -212,7 +212,7 @@ const Team = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href="/volunteer"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-primaryho text-white font-semibold rounded-full hover:shadow-solid-5 transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -221,7 +221,7 @@ const Team = () => {
               <span>Become a Volunteer</span>
             </motion.a>
             <motion.a
-              href="/careers"
+              href="/contact"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
