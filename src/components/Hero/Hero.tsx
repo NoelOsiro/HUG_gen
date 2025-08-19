@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Carousel1 from "@/assets/img/carousel-1.jpg";
 import Carousel2 from "@/assets/img/carousel-2.jpg";
@@ -18,7 +19,7 @@ const items = [
   {
     title: "Be the change that ",
     title2: "you want to see",
-    text: "Be the change that you want to see.Join hands and empower communities through youth leadership and social impact.",
+    text: "Be the change that you want to see. Join hands and empower communities through youth leadership and social impact.",
     imageUrl: Carousel2,
   },
   {
@@ -40,59 +41,141 @@ const items = [
     imageUrl: Carousel3,
   },
 ];
+
 const Hero: React.FC = () => {
   const [currentItem, setCurrentItem] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentItem((prevItem) => (prevItem + 1) % 3);
-    }, 5000);
+      setCurrentItem((prevItem) => (prevItem + 1) % items.length);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, []);
+
   return (
-    <section className="relative py-32 lg:py-36 bg-white w-full">
-      <div className="mx-auto  container px-5 sm:px-10 md:px-12 lg:px-5 flex flex-col lg:flex-row gap-10 lg:gap-12">
-        <div className="absolute w-full lg:w-1/2 inset-y-0 lg:right-0 hidden lg:block">
-          <span className="absolute -left-6 md:left-4 top-24 lg:top-28 w-24 h-24 rotate-90 skew-x-12 rounded-3xl bg-green-400 blur-xl opacity-60 lg:opacity-95 lg:block hidden"></span>
-          <span className="absolute right-4 bottom-12 w-24 h-24 rounded-3xl bg-blue-600 blur-xl opacity-80"></span>
-        </div>
-        <span className="w-4/12 lg:w-2/12 aspect-square bg-gradient-to-tr from-blue-600 to-green-400 absolute -top-5 lg:left-0 rounded-full skew-y-12 blur-2xl opacity-40 skew-x-12 rotate-90"></span>
-        <div
-          className="relative flex flex-col items-center text-center lg:text-left lg:py-7 xl:py-8 
-            lg:items-start lg:max-w-none max-w-3xl mx-auto lg:mx-0 lg:flex-1 lg:w-1/2"
-        >
-          <h1
-            className="text-3xl leading-tight sm:text-4xl md:text-5xl xl:text-6xl
-            font-bold text-gray-900"
+    <section className="relative min-h-screen flex items-center bg-white dark:bg-blacksection overflow-hidden transition-colors duration-300">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-40 h-40 bg-meta/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-28 h-28 bg-primary/30 rounded-full blur-2xl animate-pulse delay-2000"></div>
+        <div className="absolute bottom-40 right-10 w-36 h-36 bg-meta/25 rounded-full blur-3xl animate-pulse delay-500"></div>
+      </div>
+
+      <div className="relative z-10 mx-auto container px-5 sm:px-10 md:px-12 lg:px-5 py-20 lg:py-0">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen lg:min-h-0">
+          {/* Content Section */}
+          <motion.div 
+            className="flex flex-col items-center text-center lg:text-left lg:items-start space-y-8"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
           >
-            {items[currentItem].title}
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-blue-600 via-30% to-green-600">
-              {items[currentItem].title2}
-            </span>
-          </h1>
-          <p className="mt-8 text-xl text-gray-700">{items[currentItem].text}</p>
-          <div className="mt-10  w-full flex max-w-md mx-auto lg:mx-0">
-            <div className="flex sm:flex-row flex-col gap-5 w-full">
-                  <a className = "flex justify-center items-center w-full sm:w-max px-5 py-3  outline-none relative overflow-hidden border duration-300 ease-linear after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-[#172554] hover:after:opacity-100 hover:after:scale-[2.5] bg-blue-600 border-transparent hover:border-[#172554]" href="/donate">
-            <span className="relative z-10 text-white font-bold">
-                        Watch video
-                    </span>
-                  </a>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentItem}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.6 }}
+                className="space-y-6"
+              >
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-gray-900 dark:text-white">
+                  {items[currentItem].title}
+                  <br />
+                  <span className="bg-gradient-to-r from-primary via-meta to-primary bg-clip-text text-transparent animate-pulse">
+                    {items[currentItem].title2}
+                  </span>
+                </h1>
+                <p className="text-xl lg:text-2xl text-gray-700 dark:text-waterloo leading-relaxed max-w-xl">
+                  {items[currentItem].text}
+                </p>
+              </motion.div>
+            </AnimatePresence>
+
+            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md lg:max-w-none">
+              <motion.a
+                href="/donate"
+                className="flex justify-center items-center px-8 py-4 bg-gradient-to-r from-primary to-primaryho text-white font-semibold rounded-full hover:shadow-solid-7 transition-all duration-300 hover:scale-105 group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span className="relative z-10">Start Contributing</span>
+              </motion.a>
+              <motion.a
+                href="/about"
+                className="flex justify-center items-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition-all duration-300 group"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Learn More
+              </motion.a>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-1 lg:w-1/2 lg:h-auto relative lg:max-w-none lg:mx-0 mx-auto max-w-3xl">
-          <Image
-            src={items[currentItem].imageUrl}
-            alt="Hero image"
-            width={720}
-            height={820}
-            className="lg:absolute lg:w-full rounded-md object-cover lg:max-h-none "
-          />
+
+            {/* Progress Indicators */}
+            <div className="flex space-x-3 mt-8">
+              {items.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentItem(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentItem 
+                      ? 'bg-primary w-8' 
+                      : 'bg-gray-300 dark:bg-strokedark hover:bg-primary/50'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Image Section */}
+          <motion.div 
+            className="relative flex justify-center lg:justify-end"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div className="relative w-full max-w-lg lg:max-w-none">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentItem}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-meta/20 rounded-2xl blur-xl"></div>
+                  <Image
+                    src={items[currentItem].imageUrl}
+                    alt={`${items[currentItem].title} ${items[currentItem].title2}`}
+                    width={600}
+                    height={700}
+                    className="relative rounded-2xl object-cover shadow-solid-8 hover:shadow-solid-7 transition-all duration-500"
+                    priority={currentItem === 0}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          </motion.div>
         </div>
       </div>
+
+      {/* Scroll Indicator */}
+      <motion.div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-600 dark:text-white"
+        animate={{ y: [0, 10, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        <div className="flex flex-col items-center space-y-2">
+          <span className="text-sm text-gray-500 dark:text-waterloo">Scroll Down</span>
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </div>
+      </motion.div>
     </section>
   );
 };

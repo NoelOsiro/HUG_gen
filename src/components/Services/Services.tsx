@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import {
   GiAppleCore,
@@ -7,71 +8,79 @@ import {
   GiHomeGarage,
   GiHeartBattery,
 } from "react-icons/gi";
-import SectionHeader from "@/components/Section/SectionHeader";
+import { Section, SectionHeader } from "@/components/UI";
 
 const servicesData = [
   {
     icon: <GiAppleCore />,
-    title: "Feeding Program",
-    text: "We provide nutritious meals to those in need, ensuring a healthier community.",
+    title: "Nutrition Program",
+    text: "Providing nutritious meals and food security initiatives to ensure healthy growth and development in our communities.",
   },
   {
     icon: <GiBrain />,
-    title: "Sex Education",
-    text: "A comprehensive sex education program to empower with knowledge about their sexual and reproductive health.",
+    title: "Health Education",
+    text: "Comprehensive health and sexual education programs empowering youth with knowledge for informed decision-making.",
   },
   {
     icon: <GiHealthNormal />,
-    title: "Healthcare",
-    text: "Our healthcare services offer medical support for those who cannot afford it.",
+    title: "Community Healthcare",
+    text: "Accessible healthcare services and medical support for underserved communities, promoting overall wellness.",
   },
   {
     icon: <GiSchoolBag />,
-    title: "Primary Education",
-    text: "Quality education for underprivileged kids is our goal, fostering brighter futures.",
+    title: "Education Support",
+    text: "Quality education initiatives and scholarships for underprivileged children, building brighter futures through learning.",
   },
   {
     icon: <GiHomeGarage />,
-    title: "Residence Facilities",
-    text: "Temporary shelter for the homeless, providing a stepping stone to stability.",
+    title: "Safe Housing",
+    text: "Temporary shelter and housing assistance for vulnerable individuals, providing stability and security.",
   },
   {
     icon: <GiHeartBattery />,
-    title: "Social Care",
-    text: "We offer emotional support and outreach, building a strong community network.",
+    title: "Community Care",
+    text: "Emotional support, counseling, and community outreach programs that strengthen social bonds and resilience.",
   },
 ];
 
 const Service = () => {
   return (
-    <div className="service py-20">
-      <div className="container mx-auto">
-        <SectionHeader
-          title={"What We Do?"}
-          text={"We believe that we can save more lives with you"}
-        />
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 p-4">
-          {servicesData.map((service, index) => (
-            <div
-              key={index}
-              className="relative w-full flex justify-between items-center mb-45px transition duration-300 bg-white shadow-md p-8 xl:p-6 lg:p-4 rounded-lg"
-            >
-              <div className="relative w-[60px] text-blue-600 pr-8">
-                <div className=" text-blue-600 text-3xl md:text-4xl leading-60px mt-5">
-                  {service.icon}
-                </div>
-              </div>
-              <div className="relative pl-8">
-                <h3 className="font-bold mb-2 text-xl md:text-2xl">{service.title}</h3>
-                <p className="">{service.text}</p>
-                <div className="absolute left-0 top-0 h-full border-l border-yellow-300"></div>
-                <div className="absolute left-0 top-1/2 h-8 w-1 bg-blue-500 transform -translate-y-1/2"></div>
+    <Section className="bg-white dark:bg-blacksection transition-colors duration-300">
+      <SectionHeader
+        subtitle="Our Services"
+        title="What We Do?"
+        description="We believe that we can save more lives with you. Our comprehensive programs address the most critical needs in our communities."
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {servicesData.map((service, index) => (
+          <div
+            key={index}
+            className="group relative bg-gray-50 dark:bg-blackho border border-gray-200 dark:border-strokedark rounded-xl p-6 hover:border-primary/50 hover:shadow-solid-5 transition-all duration-300 hover:-translate-y-2"
+          >
+            {/* Icon Section */}
+            <div className="flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/10 to-meta/10 rounded-xl mb-6 group-hover:from-primary/20 group-hover:to-meta/20 transition-all duration-300">
+              <div className="text-primary text-3xl group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
               </div>
             </div>
-          ))}
-        </div>
+            
+            {/* Content Section */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-primary transition-colors duration-300">
+                {service.title}
+              </h3>
+              <p className="text-gray-700 dark:text-waterloo leading-relaxed">
+                {service.text}
+              </p>
+            </div>
+            
+            {/* Decorative Elements */}
+            <div className="absolute top-6 right-6 w-2 h-2 bg-primary rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-meta transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-b-xl"></div>
+          </div>
+        ))}
       </div>
-    </div>
+    </Section>
   );
 };
 
